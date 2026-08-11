@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LabFlow LIMS — Offline laboratory software for hospitals, clinics and industry</title>
 <meta name="description" content="A complete LIMS for hospitals, clinics, pharmacies and 9 industries. 100% offline, bilingual English/Arabic, device-locked licensing. Your data never leaves your building.">
+<link rel="canonical" href="https://soldiom.github.io/labflow-site/">
+<link rel="alternate" hreflang="en" href="https://soldiom.github.io/labflow-site/">
+<link rel="alternate" hreflang="ar" href="https://soldiom.github.io/labflow-site/?lang=ar">
 <link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="theme-color" content="#faf9f6">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LabFlow LIMS — Offline laboratory software">
 <meta property="og:description" content="Replace Excel and paper with a real LIMS. 100% offline, 9 industry workspaces, English/Arabic, e-signed reports, tamper-evident audit. Free 14-day trial.">
@@ -15,200 +19,63 @@
 <meta name="twitter:title" content="LabFlow LIMS — offline laboratory software">
 <meta name="twitter:description" content="100% offline · English/Arabic · e-signed CoA · tamper-evident audit · 14-day free trial">
 <meta name="twitter:image" content="https://soldiom.github.io/labflow-site/assets/dashboard-light.png">
-<style>
-:root{
-  --paper:#faf9f6; --paper2:#f3f1ec; --ink:#1a1c1a; --ink2:#4a4f4a; --ink3:#82877f;
-  --line:#e0ddd4; --line2:#c9c5b8;
-  --pine:#1d5c45; --pine-dark:#154434; --pine-pale:#e7efe9;
-  --amber:#8a6d1f;
-  --serif:Georgia,"Times New Roman",Cambria,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  --mono:ui-monospace,"Cascadia Code",Consolas,Menlo,monospace;
-  --maxw:1120px;
+<link rel="preload" as="image" href="assets/dashboard-light.png" fetchpriority="high">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LabFlow LIMS",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Laboratory Information Management System",
+  "description": "Offline-first laboratory information management system for hospitals, clinics, pharmacies and nine industries. Bilingual English/Arabic with true RTL, e-signed reports, tamper-evident audit trail and device-locked offline licensing.",
+  "url": "https://soldiom.github.io/labflow-site/",
+  "image": "https://soldiom.github.io/labflow-site/assets/dashboard-light.png",
+  "softwareVersion": "1.6.0",
+  "inLanguage": ["en", "ar"],
+  "featureList": [
+    "100% offline operation",
+    "Nine industry workspaces",
+    "E-signed reports and Certificates of Analysis",
+    "Hash-chained tamper-evident audit trail",
+    "Multi-user over LAN with role-based access",
+    "Equipment calibration and inventory tracking",
+    "Billing and invoicing",
+    "Encrypted backups",
+    "English and Arabic with right-to-left layout"
+  ]
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-html[dir="rtl"] body{font-family:"Segoe UI",Tahoma,"Noto Sans Arabic",Arial,sans-serif}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-section{padding:88px 0}
-
-::selection{background:var(--pine-pale);color:var(--pine-dark)}
-
-/* ---------- type ---------- */
-h1,h2,.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
-html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] .serif{font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",serif;font-weight:600}
-h1{font-size:clamp(40px,5.6vw,68px);line-height:1.08}
-h2{font-size:clamp(30px,3.8vw,44px);line-height:1.15;margin-bottom:16px}
-h1 em,h2 em{font-style:italic;color:var(--pine)}
-html[dir="rtl"] h1 em, html[dir="rtl"] h2 em{font-style:normal}
-.lead{font-size:18.5px;color:var(--ink2);max-width:640px}
-.small{font-size:13.5px;color:var(--ink3)}
-
-/* section label: number + rule, like a printed report */
-.sec-label{display:flex;align-items:center;gap:14px;margin-bottom:26px;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine)}
-html[dir="rtl"] .sec-label{letter-spacing:0;font-family:var(--sans);font-weight:700}
-html[dir="rtl"] .eyebrow{letter-spacing:0;font-family:var(--sans);font-weight:700}
-html[dir="rtl"] .spec-card .k, html[dir="rtl"] .contact-box .k, html[dir="rtl"] .price .plan, html[dir="rtl"] .hot-tag{letter-spacing:0;font-family:var(--sans);font-weight:700}
-.sec-label::after{content:"";height:1px;background:var(--line2);flex:1}
-
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-size:15px;font-weight:600;font-family:var(--sans);
-  border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
-.btn:hover{background:var(--pine-dark);border-color:var(--pine-dark)}
-.btn.alt{background:transparent;color:var(--ink)}
-.btn.alt:hover{background:var(--ink);color:var(--paper)}
-.btn.small{padding:9px 18px;font-size:13.5px}
-.textlink{border-bottom:1px solid var(--line2);padding-bottom:2px;font-weight:600;transition:border-color .15s,color .15s}
-.textlink:hover{color:var(--pine);border-color:var(--pine)}
-
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;gap:30px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:16.5px}
-.brand img{width:30px;height:30px}
-.nav-links{display:flex;gap:26px;margin-inline-start:auto;font-size:14.5px;color:var(--ink2)}
-.nav-links a:hover{color:var(--pine)}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.lang-btn{background:none;border:1px solid var(--line2);color:var(--ink2);padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)}
-.lang-btn:hover{border-color:var(--ink);color:var(--ink)}
-
-/* ---------- hero ---------- */
-.hero{padding:84px 0 0;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-bottom:72px}
-.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);margin-bottom:22px;display:flex;align-items:center;gap:10px}
-.eyebrow .tick{width:26px;height:1px;background:var(--pine)}
-.hero h1{margin-bottom:24px}
-.hero .lead{margin-bottom:34px}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
-.hero-note{font-size:13px;color:var(--ink3)}
-.hero-visual{position:relative}
-.hero-visual .shot{border:1px solid var(--line2);box-shadow:0 1px 2px rgba(26,28,26,.06),0 12px 32px -18px rgba(26,28,26,.25);background:#fff}
-.hero-visual .shot img{width:100%}
-.spec-card{position:absolute;bottom:-26px;inset-inline-start:-26px;background:var(--paper);border:1px solid var(--line2);padding:16px 20px;box-shadow:0 8px 24px -14px rgba(26,28,26,.3);max-width:250px}
-.spec-card .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
-.spec-card .v{font-size:14px;font-weight:600;line-height:1.45}
-
-/* ---------- stats strip ---------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
-.stat{padding:26px 8px 26px 0;border-inline-end:1px solid var(--line)}
-.stat:last-child{border-inline-end:0}
-html[dir="rtl"] .stat{padding:26px 0 26px 8px}
-.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.1;color:var(--ink)}
-.stat span{font-size:13px;color:var(--ink3)}
-
-/* ---------- industries ---------- */
-.ind{background:var(--paper2);border-bottom:1px solid var(--line)}
-.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2);background:var(--line2);gap:1px}
-.ind-cell{background:var(--paper);padding:22px 24px;display:flex;align-items:baseline;gap:14px}
-.ind-cell .n{font-family:var(--mono);font-size:11.5px;color:var(--ink3)}
-.ind-cell .t{font-weight:600;font-size:15px}
-
-/* ---------- features: editorial list ---------- */
-.feat-rows{border-top:1px solid var(--line)}
-.feat-row{display:grid;grid-template-columns:64px 300px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.feat-row .no{font-family:var(--mono);font-size:13px;color:var(--ink3)}
-.feat-row h3{font-size:17.5px;font-weight:700;letter-spacing:-.01em}
-.feat-row p{color:var(--ink2);font-size:15px}
-
-/* ---------- demo ---------- */
-.demo{background:var(--ink);color:var(--paper)}
-.demo .sec-label{color:#9dc2ae}
-.demo .sec-label::after{background:rgba(250,249,246,.2)}
-.demo h2 em{color:#9dc2ae}
-.demo .lead{color:rgba(250,249,246,.72)}
-.demo video{width:100%;border:1px solid rgba(250,249,246,.18);display:block;background:#000;margin-top:44px}
-
-/* ---------- gallery ---------- */
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:36px 32px;margin-top:12px}
-.shot-fig{border:0}
-.shot-fig .im{border:1px solid var(--line2);background:#fff;box-shadow:0 1px 2px rgba(26,28,26,.05)}
-.shot-fig figcaption{padding-top:13px;font-size:14px;color:var(--ink2);display:flex;gap:12px;align-items:baseline}
-.shot-fig figcaption .fig-n{font-family:var(--mono);font-size:11.5px;color:var(--pine);white-space:nowrap}
-
-/* ---------- licensing ---------- */
-.lic{background:var(--paper2);border-block:1px solid var(--line)}
-.lic-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.lic-steps{counter-reset:s;margin-top:8px}
-.lic-step{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line2)}
-.lic-step:last-child{border-bottom:0}
-.lic-step .sn{font-family:var(--serif);font-size:28px;color:var(--pine);line-height:1}
-.lic-step h3{font-size:16.5px;font-weight:700;margin-bottom:5px}
-.lic-step p{font-size:14.5px;color:var(--ink2)}
-.machine-chip{font-family:var(--mono);font-size:13px;background:var(--paper);border:1px solid var(--line2);padding:2px 8px;color:var(--pine-dark);white-space:nowrap}
-
-/* ---------- pricing ---------- */
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2);background:var(--line2);gap:1px;margin-top:8px}
-.price{background:var(--paper);padding:36px 32px;display:flex;flex-direction:column}
-.price.hot{background:#fff;outline:2px solid var(--pine);outline-offset:-2px;position:relative}
-.price .plan{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:18px}
-.price.hot .plan{color:var(--pine)}
-.price .amt{font-family:var(--serif);font-size:38px;line-height:1.1;margin-bottom:6px}
-.price .per{font-size:13px;color:var(--ink3);margin-bottom:26px}
-.price ul{list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14.5px;color:var(--ink2);margin-bottom:32px}
-.price li{display:flex;gap:11px;align-items:flex-start}
-.price li::before{content:"—";color:var(--pine);flex:none}
-.price .btn{margin-top:auto;justify-content:center}
-.hot-tag{position:absolute;top:0;inset-inline-end:0;background:var(--pine);color:#fff;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px}
-
-/* ---------- faq ---------- */
-.faq{max-width:780px}
-details{border-bottom:1px solid var(--line)}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{padding:21px 4px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
-summary::-webkit-details-marker{display:none}
-summary .q-n{font-family:var(--mono);font-size:12px;color:var(--ink3);flex:none}
-summary .q-t{flex:1}
-summary .q-m{font-family:var(--mono);color:var(--ink3);flex:none}
-details[open] summary .q-m::before{content:"–"}
-details:not([open]) summary .q-m::before{content:"+"}
-details .a{padding:0 4px 24px;color:var(--ink2);font-size:15px;max-width:640px}
-
-/* ---------- final ---------- */
-.final{border-top:1px solid var(--line)}
-.final-in{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
-.final .btn{margin-top:26px}
-.contact-box{border:1px solid var(--line2);background:var(--paper2);padding:30px 32px}
-.contact-box .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
-.contact-box .row{padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
-.contact-box .row:last-child{border-bottom:0}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:34px 0;background:var(--paper2)}
-.foot-in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--ink3)}
-.foot-in .brand{font-size:14px;color:var(--ink)}
-.foot-in .brand img{width:22px;height:22px}
-
-/* ---------- reveal (JS only) ---------- */
-html.js .rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-html.js .rv.in{opacity:1;transform:none}
-
-@media (max-width:940px){
-  section{padding:64px 0}
-  .hero-grid,.lic-grid,.final-in{grid-template-columns:1fr;gap:40px}
-  .spec-card{position:static;margin-top:16px;max-width:none}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-inline-end:0}
-  .ind-grid{grid-template-columns:1fr}
-  .feat-row{grid-template-columns:44px 1fr;gap:14px}
-  .feat-row p{grid-column:2}
-  .shots{grid-template-columns:1fr}
-  .price-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Does it really work with no internet at all?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely. LabFlow was built for air-gapped environments: it stores everything in a local database on your PC and blocks its own outbound network requests. Internet is never required, not even for activation."}},
+    {"@type":"Question","name":"Where is my data stored?","acceptedAnswer":{"@type":"Answer","text":"In a single database folder on your own machine, with one-click encrypted backups to any drive you choose. Nothing is uploaded anywhere."}},
+    {"@type":"Question","name":"Can several people use it at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. One PC runs as the server and colleagues connect over your local network with their own accounts and roles — administrator, supervisor, analyst, QA, registration."}},
+    {"@type":"Question","name":"What happens when my trial ends?","acceptedAnswer":{"@type":"Answer","text":"The application locks, but your data stays untouched. Activate with a licence key and you continue exactly where you left off."}},
+    {"@type":"Question","name":"What if I replace my computer?","acceptedAnswer":{"@type":"Answer","text":"Licences are locked per device, so you receive a replacement key for the new machine. Restore your encrypted backup and you are running again in minutes."}},
+    {"@type":"Question","name":"Is it really bilingual?","acceptedAnswer":{"@type":"Answer","text":"Fully. Every screen, report and label works in English and Arabic with true right-to-left layout. Each user switches from Settings."}},
+    {"@type":"Question","name":"How do updates work with no internet?","acceptedAnswer":{"@type":"Answer","text":"Each release is a fresh installer published with SHA-256 checksums and a software bill of materials. Download it on any connected machine, carry it over, install — your database and settings are preserved."}},
+    {"@type":"Question","name":"Is LabFlow certified for ISO 17025?","acceptedAnswer":{"@type":"Answer","text":"Accreditation applies to laboratories, not to software. LabFlow is built around ISO 17025-minded workflows — audit trails, signed reports, calibration records — and we will gladly walk your quality team through the controls."}}
+  ]
 }
-</style>
+</script>
 </head>
 <body>
 
-<nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site" aria-label="Main">
   <div class="nav-in">
-    <a class="brand" href="#"><img src="assets/logo.png" alt="LabFlow logo"><span>LabFlow&nbsp;LIMS</span></a>
+    <a class="brand" href="#"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
     <div class="nav-links">
       <a href="#features" data-i18n="navFeatures">Features</a>
       <a href="#demo" data-i18n="navDemo">Demo</a>
-      <a href="#licensing" data-i18n="navLicensing">Licensing</a>
+      <a href="#cost" data-i18n="navCompare">Compare</a>
+      <a href="security.html" data-i18n="navSecurity">Security</a>
       <a href="#pricing" data-i18n="navPricing">Pricing</a>
       <a href="#faq" data-i18n="navFaq">FAQ</a>
     </div>
@@ -218,6 +85,8 @@ html.js .rv.in{opacity:1;transform:none}
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- HERO -->
 <header class="hero">
@@ -233,7 +102,7 @@ html.js .rv.in{opacity:1;transform:none}
       <div class="hero-note" data-i18n="heroNote">Installs in two minutes. No credit card, no signup, no internet required.</div>
     </div>
     <div class="hero-visual rv">
-      <div class="shot"><img src="assets/dashboard-light.png" alt="LabFlow LIMS operations dashboard"></div>
+      <div class="shot"><img src="assets/dashboard-light.png" alt="LabFlow LIMS operations dashboard" width="1264" height="801" fetchpriority="high" decoding="async"></div>
       <div class="spec-card">
         <div class="k" data-i18n="specK">Deployment</div>
         <div class="v" data-i18n="specV">Single installer · local database · optional LAN multi-user</div>
@@ -250,7 +119,7 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </header>
 
-<!-- INDUSTRIES -->
+<!-- 01 INDUSTRIES -->
 <section class="ind" id="industries">
   <div class="wrap">
     <div class="sec-label"><span data-i18n="indLabel">01 · Workspaces</span></div>
@@ -270,7 +139,7 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- 02 FEATURES -->
 <section id="features">
   <div class="wrap">
     <div class="sec-label"><span data-i18n="featLabel">02 · What's included</span></div>
@@ -290,37 +159,128 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- DEMO -->
+<!-- 03 DEMO -->
 <section class="demo" id="demo">
   <div class="wrap">
     <div class="sec-label"><span data-i18n="demoLabel">03 · Demonstration</span></div>
     <h2 data-i18n-html="demoTitle">A real case, <em>end to end</em>, in 100 seconds</h2>
     <p class="lead" data-i18n="demoSub">Recorded from the actual application: patient intake, result entry, critical flags, an e-signed certificate, then the full Arabic interface.</p>
-    <video controls preload="metadata" poster="assets/poster.png" class="rv">
+    <video controls preload="metadata" poster="assets/poster.png" class="rv" width="1280" height="800">
       <source src="assets/demo.mp4" type="video/mp4">
     </video>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
+<!-- 04 PRODUCT TOUR -->
+<section id="tour">
   <div class="wrap">
-    <div class="sec-label"><span data-i18n="galLabel">04 · In use</span></div>
-    <h2 data-i18n-html="galTitle">Built like the enterprise software <em>it replaces</em></h2>
-    <div class="shots" style="margin-top:36px">
-      <figure class="shot-fig rv"><div class="im"><img src="assets/shot-critical.png" alt="Critical results board" loading="lazy"></div><figcaption><span class="fig-n">FIG. 1</span><span data-i18n="g1">The critical-results board. Out-of-range values surface the moment they are saved.</span></figcaption></figure>
-      <figure class="shot-fig rv"><div class="im"><img src="assets/shot-tests.png" alt="Result entry with live flags" loading="lazy"></div><figcaption><span class="fig-n">FIG. 2</span><span data-i18n="g2">Result entry with live N/H/L flagging against each test's reference range.</span></figcaption></figure>
-      <figure class="shot-fig rv"><div class="im"><img src="assets/dashboard-dark.png" alt="Dark mode dashboard" loading="lazy"></div><figcaption><span class="fig-n">FIG. 3</span><span data-i18n="g3">The same dashboard in dark mode — designed for night-shift work.</span></figcaption></figure>
-      <figure class="shot-fig rv"><div class="im"><img src="assets/shot-arabic.png" alt="Arabic RTL interface" loading="lazy"></div><figcaption><span class="fig-n">FIG. 4</span><span data-i18n="g4">The complete Arabic interface. True right-to-left layout, not a bolted-on translation.</span></figcaption></figure>
+    <div class="sec-label"><span data-i18n="tourLabel">04 · Product tour</span></div>
+    <h2 data-i18n-html="tourTitle">Built like the enterprise software <em>it replaces</em></h2>
+    <p class="lead" data-i18n="tourSub">Five screens, unretouched. What you see here is what installs.</p>
+    <div class="tour-tabs rv" role="tablist" aria-label="Product screens">
+      <button class="tour-tab" role="tab" aria-selected="true" data-i18n="tt1">Critical board</button>
+      <button class="tour-tab" role="tab" aria-selected="false" data-i18n="tt2">Result entry</button>
+      <button class="tour-tab" role="tab" aria-selected="false" data-i18n="tt3">Night shift</button>
+      <button class="tour-tab" role="tab" aria-selected="false" data-i18n="tt4">Arabic</button>
+      <button class="tour-tab" role="tab" aria-selected="false" data-i18n="tt5">Administration</button>
     </div>
+    <figure class="tour-panel active"><img src="assets/shot-critical.png" alt="Critical results board" loading="lazy" width="1280" height="800"><figcaption><span class="fig-n">FIG. 1</span><span data-i18n="g1">The critical-results board. Out-of-range values surface the moment they are saved.</span></figcaption></figure>
+    <figure class="tour-panel"><img src="assets/shot-tests.png" alt="Result entry with live flags" loading="lazy" width="1280" height="800"><figcaption><span class="fig-n">FIG. 2</span><span data-i18n="g2">Result entry with live N/H/L flagging against each test's reference range.</span></figcaption></figure>
+    <figure class="tour-panel"><img src="assets/dashboard-dark.png" alt="Dark mode dashboard" loading="lazy" width="1264" height="801"><figcaption><span class="fig-n">FIG. 3</span><span data-i18n="g3">The same dashboard in dark mode — designed for night-shift work.</span></figcaption></figure>
+    <figure class="tour-panel"><img src="assets/shot-arabic.png" alt="Arabic RTL interface" loading="lazy" width="1280" height="800"><figcaption><span class="fig-n">FIG. 4</span><span data-i18n="g4">The complete Arabic interface. True right-to-left layout, not a bolted-on translation.</span></figcaption></figure>
+    <figure class="tour-panel"><img src="assets/settings-dark.png" alt="Settings and administration" loading="lazy" width="1264" height="801"><figcaption><span class="fig-n">FIG. 5</span><span data-i18n="g5">Settings: users and roles, encrypted backups, licence, language — administration without a manual.</span></figcaption></figure>
   </div>
 </section>
 
-<!-- LICENSING -->
+<!-- 05 COST OF OWNERSHIP -->
+<section class="ind" id="cost">
+  <div class="wrap">
+    <div class="sec-label"><span data-i18n="costLabel">05 · Cost of ownership</span></div>
+    <h2 data-i18n-html="costTitle">The arithmetic favours <em>owning</em></h2>
+    <p class="lead" style="margin-bottom:36px" data-i18n="costSub">Cloud LIMS pricing commonly starts around $500 per month and never stops. Here is the comparison those vendors would rather you didn't make.</p>
+
+    <div class="tbl-scroll rv">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th data-i18n="cmpH0">Criterion</th>
+            <th class="hl">LabFlow LIMS</th>
+            <th data-i18n="cmpH2">Cloud LIMS</th>
+            <th data-i18n="cmpH3">Spreadsheets &amp; paper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="cmpR1">Pricing model</td><td class="hl" data-i18n="cmpR1a">One payment per workstation</td><td data-i18n="cmpR1b">Monthly per-user fee, indefinitely</td><td data-i18n="cmpR1c">Free — until an error costs you</td></tr>
+          <tr><td data-i18n="cmpR2">Where data lives</td><td class="hl" data-i18n="cmpR2a">Your building, full stop</td><td data-i18n="cmpR2b">The vendor's servers</td><td data-i18n="cmpR2c">Scattered files and binders</td></tr>
+          <tr><td data-i18n="cmpR3">Works without internet</td><td class="hl" data-i18n="cmpR3a">Yes — designed for it</td><td data-i18n="cmpR3b">No; an outage stops the lab</td><td data-i18n="cmpR3c">Yes, with no controls</td></tr>
+          <tr><td data-i18n="cmpR4">Audit trail</td><td class="hl" data-i18n="cmpR4a">Hash-chained, tamper-evident</td><td data-i18n="cmpR4b">Varies by vendor and tier</td><td data-i18n="cmpR4c">None</td></tr>
+          <tr><td data-i18n="cmpR5">E-signed reports</td><td class="hl" data-i18n="cmpR5a">Included</td><td data-i18n="cmpR5b">Often a higher tier</td><td data-i18n="cmpR5c">Wet ink and scanning</td></tr>
+          <tr><td data-i18n="cmpR6">Arabic with true RTL</td><td class="hl" data-i18n="cmpR6a">Complete, per user</td><td data-i18n="cmpR6b">Rare</td><td data-i18n="cmpR6c">Manual formatting</td></tr>
+          <tr><td data-i18n="cmpR7">Time to first case</td><td class="hl" data-i18n="cmpR7a">Minutes after install</td><td data-i18n="cmpR7b">Weeks of onboarding</td><td data-i18n="cmpR7c">Immediate, then unmanageable</td></tr>
+          <tr><td data-i18n="cmpR8">Cost of leaving</td><td class="hl" data-i18n="cmpR8a">None — the data is already yours</td><td data-i18n="cmpR8b">Export requests and lock-in</td><td data-i18n="cmpR8c">Retyping history</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="calc rv" id="calc" style="margin-top:56px">
+      <div>
+        <div class="mono-label" style="margin-bottom:18px" data-i18n="calcK">Subscription calculator</div>
+        <h3 class="serif" style="font-size:26px;margin-bottom:26px" data-i18n="calcTitle">What would the cloud bill come to?</h3>
+        <div class="row">
+          <label for="calcUsers"><span data-i18n="calcUsersL">Users</span> · <span class="val" id="calcUsersVal">5</span></label>
+          <input type="range" id="calcUsers" min="1" max="50" value="5">
+        </div>
+        <div class="row">
+          <label for="calcFee" data-i18n="calcFeeL">Monthly fee per user (USD)</label>
+          <input type="number" id="calcFee" min="0" step="50" value="500">
+        </div>
+        <div class="row" style="margin-bottom:0">
+          <label data-i18n="calcYearsL">Horizon</label>
+          <div class="yr-btns">
+            <button type="button" data-years="1" aria-pressed="false">1</button>
+            <button type="button" data-years="3" aria-pressed="true">3</button>
+            <button type="button" data-years="5" aria-pressed="false">5</button>
+            <button type="button" data-years="10" aria-pressed="false">10</button>
+          </div>
+        </div>
+      </div>
+      <div class="out">
+        <div class="k" data-i18n="calcOutK">Projected subscription spend</div>
+        <div class="big" id="calcCloud">$90,000</div>
+        <div class="sub" id="calcYearsOut">over 3 years — paid to a cloud vendor</div>
+        <div class="vs" id="calcVs">LabFlow: <b>one payment per workstation</b> — everything after that is yours.</div>
+      </div>
+    </div>
+    <p class="small" style="margin-top:14px" data-i18n="calcFoot">Figures are your own inputs — we make no claims about any specific vendor's pricing.</p>
+  </div>
+</section>
+
+<!-- 06 SECURITY -->
+<section id="security">
+  <div class="wrap">
+    <div class="sec-label"><span data-i18n="secLabel">06 · Security dossier</span></div>
+    <h2 data-i18n-html="secTitle">Security you can <em>verify</em>, not marketing</h2>
+    <p class="lead" style="margin-bottom:36px" data-i18n="secSub">Every claim below is a mechanism, not a promise — and each one works with the network cable unplugged.</p>
+    <div class="sec-grid rv">
+      <div class="sec-cell"><div class="k" data-i18n="sc1k">Audit</div><h3 data-i18n="sc1h">Hash-chained log</h3><p data-i18n="sc1p">Every action appends to an HMAC-keyed hash chain. Rewriting history breaks the chain — visibly, permanently.</p></div>
+      <div class="sec-cell"><div class="k" data-i18n="sc2k">Licensing</div><h3 data-i18n="sc2h">Ed25519 signatures</h3><p data-i18n="sc2p">Licence keys are signed with Ed25519 and verified offline against your machine ID. There is no activation server to breach.</p></div>
+      <div class="sec-cell"><div class="k" data-i18n="sc3k">Reports</div><h3 data-i18n="sc3h">E-signed certificates</h3><p data-i18n="sc3p">Certificates of Analysis carry a cryptographic signature that can be checked independently of the application.</p></div>
+      <div class="sec-cell"><div class="k" data-i18n="sc4k">Backups</div><h3 data-i18n="sc4h">Encrypted archives</h3><p data-i18n="sc4p">One-click backups are encrypted before they reach whichever drive you point them at.</p></div>
+      <div class="sec-cell"><div class="k" data-i18n="sc5k">Network</div><h3 data-i18n="sc5h">Outbound blocked</h3><p data-i18n="sc5p">The application refuses its own outbound traffic. Air-gapped deployment is the default assumption, not an afterthought.</p></div>
+      <div class="sec-cell"><div class="k" data-i18n="sc6k">Supply chain</div><h3 data-i18n="sc6h">SBOM + checksums</h3><p data-i18n="sc6p">Every release ships with a software bill of materials and SHA-256 checksums, so you can verify what you install.</p></div>
+    </div>
+    <div class="pull rv">
+      <p data-i18n="secQuote">“The safest place for laboratory data is the laboratory. LabFlow's entire architecture follows from that one sentence.”</p>
+    </div>
+    <p style="margin-top:22px"><a class="textlink" href="security.html" data-i18n="secMore">Read the full security dossier →</a></p>
+  </div>
+</section>
+
+<!-- 07 LICENSING -->
 <section class="lic" id="licensing">
   <div class="wrap lic-grid">
     <div>
-      <div class="sec-label"><span data-i18n="licLabel">05 · Licensing</span></div>
+      <div class="sec-label"><span data-i18n="licLabel">07 · Licensing</span></div>
       <h2 data-i18n-html="licTitle">Pay once. <em>Own it.</em></h2>
       <p class="lead" data-i18n="licSub">Licences are locked to your machine and verified offline with cryptographic signatures. Activation takes about a minute and never touches the internet — because there is nothing to connect to.</p>
     </div>
@@ -332,10 +292,10 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- 08 PRICING -->
 <section id="pricing">
   <div class="wrap">
-    <div class="sec-label"><span data-i18n="prLabel">06 · Pricing</span></div>
+    <div class="sec-label"><span data-i18n="prLabel">08 · Pricing</span></div>
     <h2 data-i18n-html="prTitle">Own your LIMS — <em>don't rent it</em></h2>
     <p class="lead" style="margin-bottom:36px" data-i18n="prSub">Cloud LIMS subscriptions commonly start around $500 per month, indefinitely, with your data on someone else's servers. LabFlow is a one-time purchase that lives on your hardware.</p>
     <div class="price-grid rv">
@@ -381,18 +341,20 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- 09 FAQ -->
 <section id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-label"><span data-i18n="faqLabel">07 · Questions</span></div>
+    <div class="sec-label"><span data-i18n="faqLabel">09 · Questions</span></div>
     <h2 style="margin-bottom:36px" data-i18n-html="faqTitle">Questions laboratories <em>actually ask</em></h2>
     <div class="faq">
-      <details><summary><span class="q-n">7.1</span><span class="q-t" data-i18n="q1">Does it really work with no internet at all?</span><span class="q-m"></span></summary><div class="a" data-i18n="a1">Yes — completely. LabFlow was built for air-gapped environments: it stores everything in a local database on your PC and blocks its own outbound network requests. Internet is never required, not even for activation.</div></details>
-      <details><summary><span class="q-n">7.2</span><span class="q-t" data-i18n="q2">Where is my data stored?</span><span class="q-m"></span></summary><div class="a" data-i18n="a2">In a single database folder on your own machine, with one-click encrypted backups to any drive you choose. You can open the folder from Settings. Nothing is uploaded anywhere.</div></details>
-      <details><summary><span class="q-n">7.3</span><span class="q-t" data-i18n="q3">Can several people use it at once?</span><span class="q-m"></span></summary><div class="a" data-i18n="a3">Yes. One PC runs as the server and colleagues connect over your local network with their own accounts and roles — administrator, supervisor, analyst, QA, registration. Still no internet involved.</div></details>
-      <details><summary><span class="q-n">7.4</span><span class="q-t" data-i18n="q4">What happens when my trial ends?</span><span class="q-m"></span></summary><div class="a" data-i18n="a4">The application locks, but your data stays untouched. Activate with a licence key and you continue exactly where you left off — nothing is deleted.</div></details>
-      <details><summary><span class="q-n">7.5</span><span class="q-t" data-i18n="q5">What if I replace my computer?</span><span class="q-m"></span></summary><div class="a" data-i18n="a5">Licences are locked per device, so you receive a replacement key for the new machine. Restore your encrypted backup and you are running again in minutes.</div></details>
-      <details><summary><span class="q-n">7.6</span><span class="q-t" data-i18n="q6">Is it really bilingual?</span><span class="q-m"></span></summary><div class="a" data-i18n="a6">Fully. Every screen, report and label works in English and Arabic with true right-to-left layout. Each user switches from Settings — per account, not per installation.</div></details>
+      <details><summary><span class="q-n">9.1</span><span class="q-t" data-i18n="q1">Does it really work with no internet at all?</span><span class="q-m"></span></summary><div class="a" data-i18n="a1">Yes — completely. LabFlow was built for air-gapped environments: it stores everything in a local database on your PC and blocks its own outbound network requests. Internet is never required, not even for activation.</div></details>
+      <details><summary><span class="q-n">9.2</span><span class="q-t" data-i18n="q2">Where is my data stored?</span><span class="q-m"></span></summary><div class="a" data-i18n="a2">In a single database folder on your own machine, with one-click encrypted backups to any drive you choose. You can open the folder from Settings. Nothing is uploaded anywhere.</div></details>
+      <details><summary><span class="q-n">9.3</span><span class="q-t" data-i18n="q3">Can several people use it at once?</span><span class="q-m"></span></summary><div class="a" data-i18n="a3">Yes. One PC runs as the server and colleagues connect over your local network with their own accounts and roles — administrator, supervisor, analyst, QA, registration. Still no internet involved.</div></details>
+      <details><summary><span class="q-n">9.4</span><span class="q-t" data-i18n="q4">What happens when my trial ends?</span><span class="q-m"></span></summary><div class="a" data-i18n="a4">The application locks, but your data stays untouched. Activate with a licence key and you continue exactly where you left off — nothing is deleted.</div></details>
+      <details><summary><span class="q-n">9.5</span><span class="q-t" data-i18n="q5">What if I replace my computer?</span><span class="q-m"></span></summary><div class="a" data-i18n="a5">Licences are locked per device, so you receive a replacement key for the new machine. Restore your encrypted backup and you are running again in minutes.</div></details>
+      <details><summary><span class="q-n">9.6</span><span class="q-t" data-i18n="q6">Is it really bilingual?</span><span class="q-m"></span></summary><div class="a" data-i18n="a6">Fully. Every screen, report and label works in English and Arabic with true right-to-left layout. Each user switches from Settings — per account, not per installation.</div></details>
+      <details><summary><span class="q-n">9.7</span><span class="q-t" data-i18n="q7">How do updates work with no internet?</span><span class="q-m"></span></summary><div class="a" data-i18n="a7">Each release is a fresh installer published with SHA-256 checksums and a software bill of materials. Download it on any connected machine, carry it over on a USB drive, and install — your database and settings are preserved.</div></details>
+      <details><summary><span class="q-n">9.8</span><span class="q-t" data-i18n="q8">Is LabFlow certified for ISO 17025?</span><span class="q-m"></span></summary><div class="a" data-i18n="a8">Accreditation applies to laboratories, not to software. LabFlow is built around ISO 17025-minded workflows — audit trails, signed reports, calibration records — and we will gladly walk your quality team through how each control maps to your requirements.</div></details>
     </div>
   </div>
 </section>
@@ -414,19 +376,47 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
 </section>
 
-<footer>
-  <div class="wrap foot-in">
-    <a class="brand" href="#"><img src="assets/logo.png" alt=""><span>LabFlow LIMS</span></a>
-    <span data-i18n="footNote">© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
-    <a class="textlink" href="https://github.com/Soldiom" target="_blank" rel="noopener" data-i18n="footBy">Built by Soldiom</a>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#"><img src="assets/logo.png" alt="" width="24" height="24"><span>LabFlow LIMS</span></a>
+        <p class="foot-about" data-i18n="footAbout">Offline-first laboratory information management for hospitals, clinics, pharmacies and industry. Bilingual by design.</p>
+      </div>
+      <div class="foot-col">
+        <div class="k" data-i18n="fcProdK">Product</div>
+        <a href="#features" data-i18n="fcProd1">Features</a>
+        <a href="#tour" data-i18n="fcProd2">Product tour</a>
+        <a href="#demo" data-i18n="fcProd3">Demo film</a>
+        <a href="#pricing" data-i18n="fcProd4">Pricing</a>
+        <a href="changelog.html" data-i18n="fcProd5">Changelog</a>
+      </div>
+      <div class="foot-col">
+        <div class="k" data-i18n="fcTrustK">Trust</div>
+        <a href="security.html" data-i18n="fcTrust1">Security dossier</a>
+        <a href="#licensing" data-i18n="fcTrust2">Licensing model</a>
+        <a href="privacy.html" data-i18n="fcTrust3">Privacy</a>
+        <a href="terms.html" data-i18n="fcTrust4">Terms</a>
+      </div>
+      <div class="foot-col">
+        <div class="k" data-i18n="fcContactK">Contact</div>
+        <a href="mailto:206925469+Soldiom@users.noreply.github.com" data-i18n="fcContact1">Request a trial</a>
+        <a href="https://github.com/Soldiom" target="_blank" rel="noopener" data-i18n="fcContact2">Built by Soldiom</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span data-i18n="footNote">© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
+      <span data-i18n="footTag">Made for laboratories that own their data.</span>
+    </div>
   </div>
 </footer>
 
 <script>
-document.documentElement.classList.add('js');
-const I18N = {
+window.I18N = {
   ar: {
-    navFeatures:"المميزات", navDemo:"العرض", navLicensing:"الترخيص", navPricing:"الأسعار", navFaq:"الأسئلة",
+    navFeatures:"المميزات", navDemo:"العرض", navCompare:"المقارنة", navSecurity:"الأمان", navPricing:"الأسعار", navFaq:"الأسئلة",
     navCta:"اطلب تجربة",
     pillText:"الإصدار 1.6 · تطبيق ويندوز · يعمل دون اتصال بالكامل",
     heroTitle:"نظام المختبرات الذي <em>لا يتصل بأحد</em>",
@@ -456,19 +446,50 @@ const I18N = {
     demoLabel:"٠٣ · العرض",
     demoTitle:"حالة حقيقية <em>من البداية للنهاية</em> في 100 ثانية",
     demoSub:"مسجَّل من التطبيق الفعلي: استلام مريض، إدخال نتائج، قيم حرجة، شهادة موقّعة، ثم الواجهة العربية الكاملة.",
-    galLabel:"٠٤ · قيد الاستخدام",
-    galTitle:"مبني كبرمجيات المؤسسات <em>التي يحل محلها</em>",
+    tourLabel:"٠٤ · جولة في المنتج",
+    tourTitle:"مبني كبرمجيات المؤسسات <em>التي يحل محلها</em>",
+    tourSub:"خمس شاشات دون رتوش. ما تراه هنا هو ما يُثبَّت.",
+    tt1:"النتائج الحرجة", tt2:"إدخال النتائج", tt3:"المناوبة الليلية", tt4:"العربية", tt5:"الإدارة",
     g1:"لوحة النتائج الحرجة. القيم الشاذة تظهر لحظة حفظها.",
     g2:"إدخال النتائج مع تعليم N/H/L لحظياً مقابل المدى المرجعي لكل فحص.",
     g3:"اللوحة نفسها بالوضع الداكن — مصمّم لعمل المناوبات الليلية.",
     g4:"الواجهة العربية الكاملة. تخطيط يميني حقيقي لا ترجمة ملصقة.",
-    licLabel:"٠٥ · الترخيص",
+    g5:"الإعدادات: المستخدمون والأدوار، النسخ المشفّرة، الترخيص، اللغة — إدارة دون كتيّب.",
+    costLabel:"٠٥ · كلفة الملكية",
+    costTitle:"الحساب يرجّح كفة <em>الامتلاك</em>",
+    costSub:"أسعار LIMS السحابية تبدأ عادة من نحو 500$ شهرياً ولا تتوقف. إليك المقارنة التي يفضّل أولئك المزوّدون ألا تجريها.",
+    cmpH0:"المعيار", cmpH2:"LIMS سحابي", cmpH3:"جداول وورق",
+    cmpR1:"نموذج التسعير", cmpR1a:"دفعة واحدة لكل جهاز", cmpR1b:"رسم شهري لكل مستخدم، بلا نهاية", cmpR1c:"مجاني — حتى يكلّفك خطأ",
+    cmpR2:"أين تعيش البيانات", cmpR2a:"في مبناك، وكفى", cmpR2b:"على خوادم المزوّد", cmpR2c:"ملفات ومجلدات مبعثرة",
+    cmpR3:"يعمل دون إنترنت", cmpR3a:"نعم — صُمم لذلك", cmpR3b:"لا؛ الانقطاع يوقف المختبر", cmpR3c:"نعم، لكن دون أي ضوابط",
+    cmpR4:"سجل التدقيق", cmpR4a:"مسلسل التجزئة، مضاد للتلاعب", cmpR4b:"يختلف حسب المزوّد والفئة", cmpR4c:"لا يوجد",
+    cmpR5:"تقارير موقّعة إلكترونياً", cmpR5a:"مشمولة", cmpR5b:"غالباً في فئة أعلى", cmpR5c:"حبر ومسح ضوئي",
+    cmpR6:"العربية بتخطيط يميني", cmpR6a:"كاملة، لكل مستخدم", cmpR6b:"نادرة", cmpR6c:"تنسيق يدوي",
+    cmpR7:"الوقت حتى أول حالة", cmpR7a:"دقائق بعد التثبيت", cmpR7b:"أسابيع من التهيئة", cmpR7c:"فوري، ثم يخرج عن السيطرة",
+    cmpR8:"كلفة المغادرة", cmpR8a:"لا شيء — البيانات ملكك أصلاً", cmpR8b:"طلبات تصدير واحتجاز", cmpR8c:"إعادة إدخال التاريخ",
+    calcK:"حاسبة الاشتراكات",
+    calcTitle:"كم ستبلغ فاتورة السحابة؟",
+    calcUsersL:"المستخدمون", calcFeeL:"الرسم الشهري لكل مستخدم (دولار)", calcYearsL:"المدى الزمني",
+    calcOutK:"الإنفاق المتوقع على الاشتراك",
+    calcFoot:"الأرقام من مدخلاتك أنت — ولا نزعم شيئاً عن تسعير أي مزوّد بعينه.",
+    secLabel:"٠٦ · ملف الأمان",
+    secTitle:"أمان <em>يمكن التحقق منه</em>، لا كلام تسويقي",
+    secSub:"كل بند أدناه آلية لا وعد — وكلها تعمل وكابل الشبكة مفصول.",
+    sc1k:"التدقيق", sc1h:"سجل مسلسل التجزئة", sc1p:"كل إجراء يُلحق بسلسلة تجزئة بمفتاح HMAC. إعادة كتابة التاريخ تكسر السلسلة — بشكل ظاهر ودائم.",
+    sc2k:"الترخيص", sc2h:"توقيعات Ed25519", sc2p:"مفاتيح الترخيص موقّعة بخوارزمية Ed25519 وتُتحقق دون اتصال مقابل معرّف جهازك. لا يوجد خادم تفعيل ليُخترق.",
+    sc3k:"التقارير", sc3h:"شهادات موقّعة إلكترونياً", sc3p:"تحمل شهادات التحليل توقيعاً مشفّراً يمكن فحصه باستقلال عن التطبيق.",
+    sc4k:"النسخ الاحتياطي", sc4h:"أرشيفات مشفّرة", sc4p:"النسخ بنقرة واحدة تُشفَّر قبل أن تصل إلى أي قرص تختاره.",
+    sc5k:"الشبكة", sc5h:"الاتصال الخارجي محجوب", sc5p:"يرفض التطبيق اتصالاته الخارجية بنفسه. النشر المعزول هو الافتراض الأساسي لا فكرة لاحقة.",
+    sc6k:"سلسلة التوريد", sc6h:"SBOM ومجاميع تحقق", sc6p:"كل إصدار يصدر مع قائمة مكوّنات برمجية ومجاميع SHA-256 لتتحقق مما تثبّته.",
+    secQuote:"«أسلم مكان لبيانات المختبر هو المختبر. عمارة لابفلو كلها تنبع من هذه الجملة الواحدة.»",
+    secMore:"اقرأ ملف الأمان الكامل ←",
+    licLabel:"٠٧ · الترخيص",
     licTitle:"ادفع مرة. <em>امتلكه.</em>",
     licSub:"الرخص مرتبطة بجهازك وتُتحقق دون إنترنت بتوقيعات مشفّرة. التفعيل يستغرق نحو دقيقة ولا يلمس الشبكة أبداً — إذ لا يوجد ما يتصل به أصلاً.",
     s1t:"ثبّت وقيّم", s1p:"حمّل المثبّت واستخدم المنتج كاملاً مجاناً 14 يوماً. كل الميزات مفتوحة أثناء التجربة.",
     s2t:"أرسل معرّف جهازك", s2p:"يعرض التطبيق رمزاً قصيراً مثل <span class='machine-chip'>QQQQ-WWWW-EEEE-RRRR</span>. أرسله لنا مع اسم منشأتك.",
     s3t:"الصق مفتاحك", s3p:"تستلم مفتاح ترخيص موقّعاً لذلك الجهاز — دائم أو سنوي كما تختار. يستمر بالعمل دون اتصال، إلى أجل غير مسمى.",
-    prLabel:"٠٦ · الأسعار",
+    prLabel:"٠٨ · الأسعار",
     prTitle:"امتلك نظامك — <em>لا تستأجره</em>",
     prSub:"اشتراكات LIMS السحابية تبدأ عادة من نحو 500$ شهرياً، إلى ما لا نهاية، وبياناتك على خوادم غيرك. لابفلو شراء لمرة واحدة يعيش على أجهزتك.",
     p1n:"تجربة", p1a:"مجاناً", p1per:"14 يوماً · المنتج كاملاً",
@@ -480,7 +501,7 @@ const I18N = {
     p3n:"مؤسسات", p3a:"مخصص", p3per:"أجهزة متعددة · نشر شبكي",
     p3f1:"عدة أجهزة عبر الشبكة المحلية", p3f2:"جلسة نشر وتدريب", p3f3:"مصطلحات وهوية مخصصة", p3f4:"تواصل مباشر مع المطوّر",
     p3cta:"تواصل معنا",
-    faqLabel:"٠٧ · أسئلة",
+    faqLabel:"٠٩ · أسئلة",
     faqTitle:"أسئلة تطرحها المختبرات <em>فعلاً</em>",
     q1:"هل يعمل حقاً دون أي إنترنت؟", a1:"نعم — تماماً. صُمم لابفلو للبيئات المعزولة: يخزّن كل شيء في قاعدة بيانات محلية على جهازك ويحجب طلباته الخارجية بنفسه. الإنترنت غير مطلوب أبداً، حتى للتفعيل.",
     q2:"أين تُخزَّن بياناتي؟", a2:"في مجلد قاعدة بيانات واحد على جهازك، مع نسخ احتياطية مشفّرة بنقرة إلى أي قرص تختاره. يمكنك فتح المجلد من الإعدادات. لا يُرفع شيء إلى أي مكان.",
@@ -488,6 +509,8 @@ const I18N = {
     q4:"ماذا يحدث عند انتهاء التجربة؟", a4:"يُقفل التطبيق لكن بياناتك تبقى سليمة. فعّل بمفتاح ترخيص وتابع من حيث توقفت تماماً — لا يُحذف شيء.",
     q5:"ماذا لو استبدلت جهازي؟", a5:"الرخص مرتبطة بالجهاز، فتستلم مفتاحاً بديلاً للجهاز الجديد. استعد نسختك الاحتياطية المشفّرة وستعود للعمل خلال دقائق.",
     q6:"هل هو ثنائي اللغة فعلاً؟", a6:"بالكامل. كل شاشة وتقرير وملصق يعمل بالعربية والإنجليزية بتخطيط يميني حقيقي. كل مستخدم يبدّل من الإعدادات — لكل حساب، لا لكل تثبيت.",
+    q7:"كيف تعمل التحديثات دون إنترنت؟", a7:"كل إصدار مثبّت جديد يُنشر مع مجاميع SHA-256 وقائمة مكوّنات برمجية. حمّله على أي جهاز متصل، وانقله على قرص USB، وثبّت — قاعدة بياناتك وإعداداتك محفوظة.",
+    q8:"هل لابفلو معتمد وفق ISO 17025؟", a8:"الاعتماد يخص المختبرات لا البرمجيات. لابفلو مبني حول تدفقات عمل بعقلية ISO 17025 — سجلات تدقيق وتقارير موقّعة وسجلات معايرة — ويسعدنا أن نستعرض مع فريق الجودة لديك كيف تطابق كل آلية متطلباتكم.",
     finalTitle:"أحل الجداول الممتدة على التقاعد. <em>واحتفظ بالبيانات.</em>",
     finalSub:"رسالة واحدة تصلك بالمثبّت وتجربة 14 يوماً — دون نماذج أو مكالمات مبيعات أو بطاقة.",
     finalCta1:"اطلب تجربتك",
@@ -495,33 +518,15 @@ const I18N = {
     cb1:"مثبّت ويندوز موقّع ومع مجاميع تحقق",
     cb2:"دليل بدء سريع لمساحة عمل صناعتك",
     cb3:"14 يوماً من المنتج الكامل — ثم القرار لك",
+    footAbout:"إدارة معلومات مختبرات تعمل دون اتصال، للمستشفيات والعيادات والصيدليات والصناعة. ثنائية اللغة بالتصميم.",
+    fcProdK:"المنتج", fcProd1:"المميزات", fcProd2:"جولة في المنتج", fcProd3:"فيلم العرض", fcProd4:"الأسعار", fcProd5:"سجل الإصدارات",
+    fcTrustK:"الثقة", fcTrust1:"ملف الأمان", fcTrust2:"نموذج الترخيص", fcTrust3:"الخصوصية", fcTrust4:"الشروط",
+    fcContactK:"التواصل", fcContact1:"اطلب تجربة", fcContact2:"من تطوير Soldiom",
     footNote:"© 2026 لابفلو LIMS — برمجيات مختبرات دون اتصال. جميع الحقوق محفوظة.",
-    footBy:"من تطوير Soldiom"
+    footTag:"صُنع لمختبرات تمتلك بياناتها."
   }
 };
-const EN = {};
-let lang = 'en';
-function snapshotEN(){
-  document.querySelectorAll('[data-i18n]').forEach(el=>{ EN[el.dataset.i18n] = el.textContent; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el=>{ EN[el.dataset.i18nHtml] = el.innerHTML; });
-}
-function apply(map){
-  document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=map[el.dataset.i18n]; if(v) el.textContent=v; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el=>{ const v=map[el.dataset.i18nHtml]; if(v) el.innerHTML=v; });
-}
-function toggleLang(){
-  lang = lang==='en' ? 'ar' : 'en';
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
-  document.getElementById('langBtn').textContent = lang==='en' ? 'العربية' : 'English';
-  apply(lang==='en' ? EN : I18N.ar);
-}
-snapshotEN();
-if (new URLSearchParams(location.search).get('lang')==='ar' || (navigator.language||'').startsWith('ar')) toggleLang();
-
-const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.08,rootMargin:'0px 0px -5% 0px'});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>el.classList.add('in')), 2500);
 </script>
+<script src="assets/site.js"></script>
 </body>
 </html>

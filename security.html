@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security dossier — LabFlow LIMS</title>
+<meta name="description" content="How LabFlow LIMS protects laboratory data: hash-chained audit trail, Ed25519 offline licensing, e-signed reports, encrypted backups, blocked outbound network, SBOM and checksums.">
+<link rel="canonical" href="https://soldiom.github.io/labflow-site/security.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="theme-color" content="#faf9f6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LabFlow LIMS — Security dossier">
+<meta property="og:description" content="Mechanisms, not promises: hash-chained audit, offline Ed25519 licensing, e-signed CoA, encrypted backups, SBOM + SHA-256 checksums.">
+<meta property="og:image" content="https://soldiom.github.io/labflow-site/assets/dashboard-light.png">
+<meta property="og:url" content="https://soldiom.github.io/labflow-site/security.html">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#demo">Demo</a>
+      <a href="index.html#cost">Compare</a>
+      <a href="security.html" style="color:var(--pine)">Security</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn small" href="index.html#contact">Request a trial</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="sec-label"><span>Trust · Document 01</span></div>
+    <h1>Security <em>dossier</em></h1>
+    <p class="lead">This page is written for the person who has to say "no" — the IT manager, the quality officer, the security reviewer. No marketing claims; every item below names the mechanism, what it protects against, and how you can check it yourself.</p>
+  </div>
+</header>
+
+<div class="wrap prose">
+
+  <h2>1 · The architecture is the security model</h2>
+  <p>LabFlow is a desktop application. Your database lives in a folder on your own machine; multi-user deployments talk over your local network only. There is no cloud tenant, no vendor database, no telemetry endpoint. Most data-breach scenarios that apply to cloud LIMS — vendor compromise, credential stuffing against a hosted portal, subpoenaed third-party servers, silent terms-of-service changes — do not apply, because the surface they attack does not exist here.</p>
+  <div class="note"><strong>Verify it:</strong> run the application with Windows Resource Monitor or any packet capture open. The application blocks its own outbound network traffic as policy; you will see no calls home — during install, activation, or daily use.</div>
+
+  <h2>2 · Tamper-evident audit trail</h2>
+  <p>Every significant action — logins, result entries, edits, approvals, exports, configuration changes — is appended to an audit log where each record carries an HMAC-keyed hash that chains to the previous record, similar in spirit to a blockchain ledger.</p>
+  <ul>
+    <li><strong>What it protects against:</strong> silent history rewrites — by anyone, including administrators editing the database file directly.</li>
+    <li><strong>What happens on tampering:</strong> chain verification fails from the altered record onward, and the verification screen shows exactly where.</li>
+    <li><strong>Verify it:</strong> Settings → Audit → Verify chain. Then try editing an old row in a throwaway database and verify again.</li>
+  </ul>
+
+  <h2>3 · E-signed results and certificates</h2>
+  <p>Result approval applies a cryptographic e-signature tied to the approving user. Exported Certificates of Analysis carry the signature, so a printed or emailed certificate can be checked against the record that produced it.</p>
+  <ul>
+    <li><strong>What it protects against:</strong> forged or altered reports circulating under your laboratory's name.</li>
+    <li><strong>Verify it:</strong> approve a result, export the CoA, alter a digit in a copy, and run verification — the altered copy fails.</li>
+  </ul>
+
+  <h2>4 · Licensing without an activation server</h2>
+  <p>Licence keys are signed with <strong>Ed25519</strong> and verified locally against your machine ID. Activation is a paste, not a connection.</p>
+  <ul>
+    <li><strong>What it protects against:</strong> the classic failure of activation servers — vendor goes away, server goes down, product stops working. LabFlow has no server to go down; a valid key keeps verifying offline, indefinitely.</li>
+    <li><strong>Also worth knowing:</strong> the private signing key never ships in the product. Only the public verification key is embedded.</li>
+  </ul>
+
+  <h2>5 · Encrypted backups</h2>
+  <p>One-click backups are encrypted before they are written to whatever destination you choose — USB drive, network share, external disk. Restoring requires the passphrase.</p>
+  <ul>
+    <li><strong>What it protects against:</strong> the most common real-world leak in small laboratories — a readable backup on a lost USB stick.</li>
+  </ul>
+
+  <h2>6 · Accounts, roles, and sessions</h2>
+  <ul>
+    <li>Passwords are stored as salted hashes, never in plain text.</li>
+    <li>Role-based access: administrator, supervisor, analyst, QA and reception see only what their role permits.</li>
+    <li>Failed-login lockout slows brute-force attempts on shared workstations.</li>
+    <li>Trial and licence state are anchored against clock rollback, so winding the system clock back does not extend anything.</li>
+  </ul>
+
+  <h2>7 · Supply chain: verify what you install</h2>
+  <p>Every release is published with <strong>SHA-256 checksums</strong> and a <strong>software bill of materials (SBOM)</strong> listing the exact open-source components inside the installer.</p>
+  <pre><code># PowerShell — verify the installer you received
+Get-FileHash .\LabFlow-Setup.exe -Algorithm SHA256
+# compare against SHA256SUMS.txt from the release</code></pre>
+
+  <h2>8 · On ISO 17025 and regulatory language</h2>
+  <p>Accreditation applies to laboratories, not to software, so we will never claim "ISO 17025 certified software" — no honest vendor can. What LabFlow provides are the controls an ISO 17025-minded assessment expects to find: attributable records, tamper-evident history, signed reports, calibration and maintenance logs, and access control. We are glad to walk your quality team through how each mechanism maps to your checklist.</p>
+
+  <h2>9 · Disclosure</h2>
+  <p>Found a security issue? Email us — the address is on the <a class="textlink" href="index.html#contact">contact section</a> — and you will get a human reply. We publish fixes in the <a class="textlink" href="changelog.html">changelog</a> and credit reporters who want credit.</p>
+
+  <p style="margin-top:44px"><a class="btn" href="index.html#contact">Request a trial</a></p>
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-base" style="border-top:0;padding-top:0">
+      <span>© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
+      <span><a class="textlink" href="index.html">Home</a> · <a class="textlink" href="changelog.html">Changelog</a> · <a class="textlink" href="privacy.html">Privacy</a> · <a class="textlink" href="terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
