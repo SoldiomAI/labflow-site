@@ -1,0 +1,44 @@
+name: Trial request
+description: Request a 14-day LabFlow LIMS trial — we reply with the installer and a quick-start guide.
+title: "Trial request: "
+labels: ["trial-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in **LabFlow LIMS**. Fill in the two fields below and submit — you'll get a reply with the signed installer and a quick-start guide for your industry.
+        Nothing here is public except what you type; feel free to keep it brief.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      description: Lab, hospital, clinic, pharmacy or company name (or "personal evaluation").
+      placeholder: e.g. Al-Noor Medical Laboratory
+    validations:
+      required: true
+  - type: dropdown
+    id: industry
+    attributes:
+      label: Industry workspace
+      description: Which workspace should the quick-start guide cover?
+      options:
+        - Hospital / Clinical
+        - Pharmacy
+        - Food & Water
+        - Environmental
+        - Veterinary
+        - Petrochemical / Industrial
+        - Research / University
+        - Forensic
+        - Cosmetics / QC
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else? (optional)
+      description: Workstation count, questions, preferred language (English / العربية) — anything useful.
+      placeholder: e.g. 3 workstations, Arabic interface preferred
+    validations:
+      required: false
