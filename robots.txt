@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soldiom.github.io/labflow-site/sitemap.xml
+Sitemap: https://soldiomai.github.io/labflow-site/sitemap.xml
