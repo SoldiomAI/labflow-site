@@ -32,14 +32,15 @@
   "description": "Offline-first laboratory information management system for hospitals, clinics, pharmacies and nine industries. Bilingual English/Arabic with true RTL, e-signed reports, tamper-evident audit trail and device-locked offline licensing.",
   "url": "https://soldiom.github.io/labflow-site/",
   "image": "https://soldiom.github.io/labflow-site/assets/dashboard-light.png",
-  "softwareVersion": "1.6.0",
+  "softwareVersion": "1.7.0",
   "inLanguage": ["en", "ar"],
   "featureList": [
     "100% offline operation",
     "Nine industry workspaces",
     "E-signed reports and Certificates of Analysis",
     "Hash-chained tamper-evident audit trail",
-    "Multi-user over LAN with role-based access",
+    "Multi-user over LAN with role-based access and zero-config discovery",
+    "Offline document search: ask questions across SOPs and scans",
     "Equipment calibration and inventory tracking",
     "Billing and invoicing",
     "Encrypted backups",
@@ -155,6 +156,7 @@
       <div class="feat-row rv"><span class="no">2.7</span><h3 data-i18n="f7t">Equipment &amp; inventory</h3><p data-i18n="f7p">Calibration schedules with due-date alerts, maintenance history, reagent stock levels and low-stock warnings — in the same system as your cases.</p></div>
       <div class="feat-row rv"><span class="no">2.8</span><h3 data-i18n="f8t">Billing included</h3><p data-i18n="f8p">Generate invoices directly from cases, track payment status and export revenue summaries without re-typing anything into a second application.</p></div>
       <div class="feat-row rv"><span class="no">2.9</span><h3 data-i18n="f9t">Dark &amp; light · English &amp; Arabic</h3><p data-i18n="f9p">A restrained dark theme for night shifts, a bright theme for daylight, and complete Arabic localisation with true right-to-left layout. Each user picks their own.</p></div>
+      <div class="feat-row rv"><span class="no">2.10</span><h3 data-i18n="f10t">Ask your documents</h3><p data-i18n="f10p">Ask a question in plain language and get cited passages from inside your own SOPs and scanned documents — ranked search that runs entirely on your PC, in English and Arabic. Click a citation to open the source file.</p></div>
     </div>
   </div>
 </section>
@@ -443,6 +445,7 @@ window.I18N = {
     f7t:"الأجهزة والمخزون", f7p:"جداول معايرة بتنبيهات استحقاق، سجل صيانة، مستويات الكواشف وتحذيرات النقص — في النظام نفسه مع حالاتك.",
     f8t:"فوترة مدمجة", f8p:"أنشئ الفواتير مباشرة من الحالات وتتبّع السداد وصدّر ملخصات الإيرادات دون إعادة إدخال في تطبيق ثانٍ.",
     f9t:"داكن وفاتح · عربي وإنجليزي", f9p:"سمة داكنة هادئة للمناوبات الليلية وأخرى فاتحة للنهار، وتعريب كامل بتخطيط يميني حقيقي. كل مستخدم يختار بنفسه.",
+    f10t:"اسأل وثائقك", f10p:"اسأل بلغة عادية واحصل على مقاطع مقتبسة من داخل إجراءات عملك ومستنداتك الممسوحة — بحث مرتب يعمل بالكامل على جهازك، بالعربية والإنجليزية. اضغط الاقتباس لفتح الملف المصدر.",
     demoLabel:"٠٣ · العرض",
     demoTitle:"حالة حقيقية <em>من البداية للنهاية</em> في 100 ثانية",
     demoSub:"مسجَّل من التطبيق الفعلي: استلام مريض، إدخال نتائج، قيم حرجة، شهادة موقّعة، ثم الواجهة العربية الكاملة.",
