@@ -187,6 +187,12 @@ html[dir="rtl"] .pull p{font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",serif}
 
 /* ---------- pricing ---------- */
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2);background:var(--line2);gap:1px;margin-top:8px}
+.pilot-cta{margin-top:32px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:38px 40px;display:flex;gap:36px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pilot-cta-txt{max-width:640px}
+.pilot-cta h3{font-size:clamp(22px,2.6vw,30px);line-height:1.2;margin-bottom:12px}
+.pilot-cta p{color:var(--paper);opacity:.82;font-size:15.5px}
+.btn.pilot-btn{background:var(--paper);color:var(--ink);border-color:var(--paper);flex-shrink:0}
+.btn.pilot-btn:hover{background:transparent;color:var(--paper)}
 .price{background:var(--paper);padding:36px 32px;display:flex;flex-direction:column}
 .price.hot{background:#fff;outline:2px solid var(--pine);outline-offset:-2px;position:relative}
 .price .plan{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:18px}

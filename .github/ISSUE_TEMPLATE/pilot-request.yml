@@ -1,0 +1,80 @@
+name: Pilot program application
+description: Apply for one of 3 founding pilot seats — 90 days of LabFlow LIMS, free, with direct support.
+title: "Pilot application: "
+labels: ["pilot-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Founding pilot program — 3 laboratories, 90 days, free.**
+        You get the full product, setup help and a direct line to the builder. In return you run real samples through LabFlow and answer a short weekly check-in. Founding labs keep a permanent price advantage if they buy afterwards.
+        Nothing here is public except what you type; keep it brief.
+  - type: input
+    id: organization
+    attributes:
+      label: Laboratory name
+      description: The lab that would run the pilot.
+      placeholder: e.g. Al-Noor Medical Laboratory
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: City / country
+      placeholder: e.g. Riyadh, Saudi Arabia
+    validations:
+      required: true
+  - type: dropdown
+    id: labtype
+    attributes:
+      label: Laboratory type
+      options:
+        - Medical / clinical
+        - Pharmacy QC
+        - Food & water testing
+        - Environmental
+        - Veterinary
+        - Industrial / petrochemical QC
+        - Research / university
+        - Forensic / government
+        - Cosmetics QC
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: volume
+    attributes:
+      label: Roughly how many samples per day?
+      options:
+        - Under 10
+        - 10–50
+        - 50–200
+        - Over 200
+    validations:
+      required: true
+  - type: dropdown
+    id: current
+    attributes:
+      label: What do you use today?
+      options:
+        - Paper register
+        - Excel / spreadsheets
+        - Another LIMS
+        - Mix of the above
+    validations:
+      required: true
+  - type: textarea
+    id: contact
+    attributes:
+      label: How should we reach you?
+      description: Email or WhatsApp number, preferred language (English / العربية), and best time to talk.
+      placeholder: e.g. lab.manager@example.com · WhatsApp +966 5X XXX XXXX · Arabic preferred
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else? (optional)
+      description: Workstation count, must-have workflows, questions.
+    validations:
+      required: false
