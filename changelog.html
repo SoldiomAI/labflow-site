@@ -44,7 +44,18 @@
 <div class="wrap prose">
 
   <div class="rel">
-    <div class="rel-head"><span class="v">1.8.0</span><span class="d">August 2026</span><span class="tagx">Current</span></div>
+    <div class="rel-head"><span class="v">1.9.0</span><span class="d">August 2026</span><span class="tagx">Current</span></div>
+    <ul>
+      <li>Command palette (Ctrl+K): jump to any page, toggle the theme, verify the audit chain, or find a case, sample, person or report by typing a few characters — role-aware, English/Arabic</li>
+      <li>System Health card for administrators: backup age, live audit-chain verification, free disk space, database size, licence state and network mode at a glance</li>
+      <li>Backup reminder banner when no backup exists or the last one is older than 7 days</li>
+      <li>CSV exports neutralise spreadsheet formula injection (OWASP guidance); numbers and IDs inside Arabic text now always render left-to-right</li>
+      <li>Audit-chain tamper regression suite: edits, deletions, forged inserts, reordering and hash rewrites are all detected in tests</li>
+    </ul>
+  </div>
+
+  <div class="rel">
+    <div class="rel-head"><span class="v">1.8.0</span><span class="d">August 2026</span></div>
     <ul>
       <li>Pilot support card in Settings: send feedback, export a diagnostics file (never patient or case data — enforced by tests), and generate a printable weekly usage report (EN/AR)</li>
       <li>Dashboard banner warns 14 days before a licence or pilot ends</li>
