@@ -35,9 +35,9 @@
   "softwareVersion": "1.9.0",
   "inLanguage": ["en", "ar"],
   "offers": [
-    {"@type":"Offer","name":"SOLO","price":"249","priceCurrency":"KWD","description":"1 PC — one-time perpetual license"},
-    {"@type":"Offer","name":"LAB","price":"449","priceCurrency":"KWD","description":"Up to 3 PCs on LAN — one-time perpetual license"},
-    {"@type":"Offer","name":"LAN PRO","price":"799","priceCurrency":"KWD","description":"Up to 10 PCs on LAN — one-time perpetual license"}
+    {"@type":"Offer","name":"Per-PC license","price":"499","priceCurrency":"USD","description":"One PC — one-time perpetual license"},
+    {"@type":"Offer","name":"Volume — 3+ PCs","price":"449","priceCurrency":"USD","description":"Per PC from 3 PCs — shared LAN database"},
+    {"@type":"Offer","name":"Volume — 10+ PCs","price":"399","priceCurrency":"USD","description":"Per PC from 10 PCs — onboarding included"}
   ],
   "featureList": [
     "100% offline operation",
@@ -304,12 +304,12 @@
   <div class="wrap">
     <div class="sec-label"><span data-i18n="prLabel">08 · Pricing</span></div>
     <h2 data-i18n-html="prTitle">Own your LIMS — <em>don't rent it</em></h2>
-    <p class="lead" style="margin-bottom:36px" data-i18n="prSub">Cloud LIMS subscriptions commonly start around $500 per month, indefinitely, with your data on someone else's servers. LabFlow is a one-time purchase that lives on your hardware.</p>
+    <p class="lead" style="margin-bottom:36px" data-i18n="prSub">Cloud LIMS subscriptions commonly start around $500 per month, indefinitely, with your data on someone else's servers. LabFlow is $499 per PC, once — one license, one PC, anywhere in the world.</p>
     <div class="price-grid rv">
       <div class="price">
-        <div class="plan" data-i18n="p1n">SOLO</div>
-        <div class="amt" data-i18n="p1a">249 KWD</div>
-        <div class="per" data-i18n="p1per">≈ $810 · one-time · 1 PC</div>
+        <div class="plan" data-i18n="p1n">ONE PC</div>
+        <div class="amt" data-i18n="p1a">$499</div>
+        <div class="per" data-i18n="p1per">per PC · one-time · perpetual</div>
         <ul>
           <li data-i18n="p1f1">The full product on one PC — nothing locked</li>
           <li data-i18n="p1f2">Signed EN/AR reports, audit trail, backups</li>
@@ -319,12 +319,12 @@
         <a class="btn alt" href="pricing.html" data-i18n="p1cta">See full pricing</a>
       </div>
       <div class="price hot">
-        <div class="hot-tag" data-i18n="p2tag">Most labs choose this</div>
-        <div class="plan" data-i18n="p2n">LAB</div>
-        <div class="amt" data-i18n="p2a">449 KWD</div>
-        <div class="per" data-i18n="p2per">≈ $1,460 · one-time · up to 3 PCs</div>
+        <div class="hot-tag" data-i18n="p2tag">Most labs run three</div>
+        <div class="plan" data-i18n="p2n">3+ PCS</div>
+        <div class="amt" data-i18n="p2a">$449</div>
+        <div class="per" data-i18n="p2per">per PC · 3 PCs = $1,347 · one LAN database</div>
         <ul>
-          <li data-i18n="p2f1">Up to 3 PCs sharing one database over your LAN</li>
+          <li data-i18n="p2f1">Every PC from the third is 10% off — automatic</li>
           <li data-i18n="p2f2">Roles per user — admin, analyst, QA, registration</li>
           <li data-i18n="p2f3">Remote LAN setup assistance included</li>
           <li data-i18n="p2f4">Priority WhatsApp support, same business day</li>
@@ -333,19 +333,19 @@
         <a class="btn" href="demo.html" data-i18n="p2cta">Book a demo</a>
       </div>
       <div class="price">
-        <div class="plan" data-i18n="p3n">LAN PRO</div>
-        <div class="amt" data-i18n="p3a">799 KWD</div>
-        <div class="per" data-i18n="p3per">≈ $2,600 · one-time · up to 10 PCs</div>
+        <div class="plan" data-i18n="p3n">10+ PCS</div>
+        <div class="amt" data-i18n="p3a">$399</div>
+        <div class="per" data-i18n="p3per">per PC · 10 PCs = $3,990 · whole-lab coverage</div>
         <ul>
-          <li data-i18n="p3f1">Whole-lab coverage — up to 10 PCs</li>
-          <li data-i18n="p3f2">Onboarding session, remote or on-site in Kuwait</li>
+          <li data-i18n="p3f1">Every PC from the tenth is 20% off — automatic</li>
+          <li data-i18n="p3f2">Onboarding over screen-share — on-site in Kuwait</li>
           <li data-i18n="p3f3">We import your existing test catalog for you</li>
           <li data-i18n="p3f4">A direct line to the builder</li>
         </ul>
         <a class="btn alt" href="demo.html" data-i18n="p3cta">Talk to us</a>
       </div>
     </div>
-    <p class="price-foot rv" data-i18n-html="prFoot">All licenses are perpetual and device-locked · 14-day free trial · 30-day money-back guarantee · <a class="textlink" href="pricing.html">full pricing details and the founding-labs offer →</a></p>
+    <p class="price-foot rv" data-i18n-html="prFoot">Every license is perpetual and locked to one PC · 14-day free trial · 30-day money-back guarantee · <a class="textlink" href="pricing.html">full pricing details and the founding-labs offer →</a></p>
     <div class="pilot-cta rv" id="pilot">
       <div class="pilot-cta-txt">
         <div class="mono-label" style="color:inherit;opacity:.7;margin-bottom:10px" data-i18n="piTag">Founding pilot · 3 seats</div>
@@ -514,17 +514,17 @@ window.I18N = {
     s3t:"الصق مفتاحك", s3p:"تستلم مفتاح ترخيص موقّعاً لذلك الجهاز — دائم أو سنوي كما تختار. يستمر بالعمل دون اتصال، إلى أجل غير مسمى.",
     prLabel:"٠٨ · الأسعار",
     prTitle:"امتلك نظامك — <em>لا تستأجره</em>",
-    prSub:"اشتراكات LIMS السحابية تبدأ عادة من نحو 500$ شهرياً، إلى ما لا نهاية، وبياناتك على خوادم غيرك. لابفلو شراء لمرة واحدة يعيش على أجهزتك.",
-    p1n:"سولو", p1a:"٢٤٩ د.ك", p1per:"≈ ٨١٠ دولاراً · دفعة واحدة · جهاز واحد",
+    prSub:"اشتراكات LIMS السحابية تبدأ عادة من نحو 500$ شهرياً، إلى ما لا نهاية، وبياناتك على خوادم غيرك. لابفلو ٤٩٩ دولاراً للجهاز، مرة واحدة — رخصة واحدة، جهاز واحد، في أي مكان في العالم.",
+    p1n:"جهاز واحد", p1a:"٤٩٩ دولاراً", p1per:"للجهاز · دفعة واحدة · رخصة دائمة",
     p1f1:"المنتج كاملاً على جهاز واحد — دون أي قفل", p1f2:"تقارير موقّعة عربي/إنجليزي وسجل تدقيق ونسخ احتياطية", p1f3:"سنة من التحديثات والدعم مشمولة", p1f4:"لم تجدد؟ يستمر بالعمل — للأبد",
     p1cta:"كل تفاصيل الأسعار",
-    p2tag:"اختيار معظم المختبرات", p2n:"لاب", p2a:"٤٤٩ د.ك", p2per:"≈ ١,٤٦٠ دولاراً · دفعة واحدة · حتى ٣ أجهزة",
-    p2f1:"حتى ٣ أجهزة تتشارك قاعدة بيانات واحدة عبر شبكتكم", p2f2:"أدوار لكل مستخدم — مدير ومحلل وجودة واستقبال", p2f3:"مساعدة إعداد الشبكة عن بُعد مشمولة",
+    p2tag:"معظم المختبرات تشغّل ٣ أجهزة", p2n:"٣ أجهزة فأكثر", p2a:"٤٤٩ دولاراً", p2per:"للجهاز · ٣ أجهزة = ١,٣٤٧ دولاراً · قاعدة بيانات واحدة",
+    p2f1:"كل جهاز ابتداءً من الثالث بخصم ١٠٪ — تلقائياً", p2f2:"أدوار لكل مستخدم — مدير ومحلل وجودة واستقبال", p2f3:"مساعدة إعداد الشبكة عن بُعد مشمولة",
     p2f4:"دعم واتساب بأولوية، نفس يوم العمل", p2f5:"سنة من التحديثات والدعم مشمولة", p2cta:"احجز عرضاً",
-    p3n:"لان برو", p3a:"٧٩٩ د.ك", p3per:"≈ ٢,٦٠٠ دولار · دفعة واحدة · حتى ١٠ أجهزة",
-    p3f1:"تغطية المختبر كاملاً — حتى ١٠ أجهزة", p3f2:"جلسة تهيئة، عن بُعد أو حضورياً في الكويت", p3f3:"نستورد كتالوج فحوصاتكم الحالي بأنفسنا", p3f4:"تواصل مباشر مع المطوّر",
+    p3n:"١٠ أجهزة فأكثر", p3a:"٣٩٩ دولاراً", p3per:"للجهاز · ١٠ أجهزة = ٣,٩٩٠ دولاراً · تغطية المختبر كاملاً",
+    p3f1:"كل جهاز ابتداءً من العاشر بخصم ٢٠٪ — تلقائياً", p3f2:"جلسة تهيئة عبر مشاركة الشاشة — وحضورياً في الكويت", p3f3:"نستورد كتالوج فحوصاتكم الحالي بأنفسنا", p3f4:"تواصل مباشر مع المطوّر",
     p3cta:"تحدث معنا",
-    prFoot:"جميع الرخص دائمة ومقفلة على الجهاز · تجربة ١٤ يوماً مجاناً · ضمان استرداد ٣٠ يوماً · <a class=\"textlink\" href=\"pricing.html\">كل تفاصيل الأسعار وعرض المختبرات المؤسِّسة ←</a>",
+    prFoot:"كل رخصة دائمة ومقفلة على جهاز واحد · تجربة ١٤ يوماً مجاناً · ضمان استرداد ٣٠ يوماً · <a class=\"textlink\" href=\"pricing.html\">كل تفاصيل الأسعار وعرض المختبرات المؤسِّسة ←</a>",
     piTag:"برنامج تجريبي تأسيسي · ٣ مقاعد",
     piTitle:"شغّل مختبرك على لابفلو ٩٠ يوماً — مجاناً",
     piSub:"نستقبل ثلاثة مختبرات حقيقية كشركاء تجربة تأسيسيين. تحصل على المنتج كاملاً ومساعدة في الإعداد وتواصلاً مباشراً مع المطوّر لمدة ٩٠ يوماً دون مقابل. في المقابل، تُشغّل عينات حقيقية عليه وتخبرنا الحقيقة مرة كل أسبوع. المختبرات التأسيسية تحتفظ بأفضلية سعرية دائمة عند الشراء.",
