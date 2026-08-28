@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — LabFlow LIMS · Offline, licensing, data ownership, support</title>
+<meta name="description" content="Straight answers about LabFlow LIMS: offline operation, perpetual licensing, data ownership, hardware requirements, payment in Kuwait, support, and what LabFlow does not do yet.">
+<link rel="canonical" href="https://soldiomai.github.io/labflow-site/faq.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="theme-color" content="#faf9f6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LabFlow LIMS — frequently asked questions">
+<meta property="og:description" content="Offline operation, perpetual licensing, data ownership, payments, support — and an honest list of what LabFlow doesn't do yet.">
+<meta property="og:image" content="https://soldiomai.github.io/labflow-site/assets/dashboard-light.png">
+<meta property="og:url" content="https://soldiomai.github.io/labflow-site/faq.html">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Does LabFlow really work without internet?","acceptedAnswer":{"@type":"Answer","text":"Yes. LabFlow runs entirely on your PC, blocks its own outbound network requests, and even license activation works offline. Internet is never required for daily work."}},
+    {"@type":"Question","name":"Where is my data stored?","acceptedAnswer":{"@type":"Answer","text":"In a local database on your own PC, with encrypted backups you control. Nothing is sent to any cloud or third party."}},
+    {"@type":"Question","name":"What happens when my license PC dies?","acceptedAnswer":{"@type":"Answer","text":"License reissue for a replacement PC is always free — the license is perpetual. Restore your encrypted backup and continue."}},
+    {"@type":"Question","name":"Is it a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. You pay once and own the license forever. An optional yearly updates-and-support plan exists, and if you skip it LabFlow keeps working."}},
+    {"@type":"Question","name":"Does LabFlow connect to analyzers?","acceptedAnswer":{"@type":"Answer","text":"Not directly yet. LabFlow imports CSV result exports today; live ASTM/HL7 instrument interfaces are on the roadmap but not in the product."}},
+    {"@type":"Question","name":"Does it handle insurance claims?","acceptedAnswer":{"@type":"Answer","text":"No. LabFlow includes basic invoicing and payment tracking, but no insurance claim submission or e-invoicing integrations."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
+    <div class="nav-links">
+      <a href="index.html#features" data-i18n="navFeatures">Features</a>
+      <a href="industries.html" data-i18n="navIndustries">Industries</a>
+      <a href="compare.html" data-i18n="navCompare">Compare</a>
+      <a href="pricing.html" data-i18n="navPricing">Pricing</a>
+      <a href="faq.html" style="color:var(--pine)" data-i18n="navFaq">FAQ</a>
+      <a href="security.html" data-i18n="navSecurity">Security</a>
+    </div>
+    <div class="nav-cta">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+      <a class="btn small" href="demo.html" data-i18n="navCta">Book a demo</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="sec-label"><span data-i18n="headLabel">Questions · Answered plainly</span></div>
+    <h1 data-i18n-html="headTitle">Everything people ask before trusting us <em>with their lab</em></h1>
+    <p class="lead" data-i18n="headSub">Short answers, no hedging. If your question isn't here, ask it on a demo call — the last section covers what LabFlow deliberately doesn't do.</p>
+  </div>
+</header>
+
+<section style="padding-top:26px">
+  <div class="wrap" style="max-width:820px">
+
+    <h2 class="serif" style="font-size:22px;margin:8px 0 14px" data-i18n="g1T">Working offline</h2>
+
+    <details class="faq rv">
+      <summary data-i18n="q1">Does LabFlow really work with no internet at all?</summary>
+      <p data-i18n="a1">Yes — completely. The application runs on your PC, stores data on your PC, and actively blocks its own outbound network requests. Even license activation is offline. You could run a lab in a basement with no connection, indefinitely.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q2">Then how do multiple PCs share one database?</summary>
+      <p data-i18n="a2">Over your own local network (LAN) — no internet involved. One PC hosts the database; others join it. LabFlow finds the host automatically on the network, so there is nothing to configure beyond choosing which machine is the host.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q3">How do I get updates if I'm offline?</summary>
+      <p data-i18n="a3">Updates ship as a signed installer file. Download it on any connected device, carry it over on a USB stick if you want, and run it. Your database and settings are untouched by updates, and updating is never required — every version keeps working.</p>
+    </details>
+
+    <h2 class="serif" style="font-size:22px;margin:34px 0 14px" data-i18n="g2T">Your data</h2>
+
+    <details class="faq rv">
+      <summary data-i18n="q4">Where exactly is my data stored?</summary>
+      <p data-i18n="a4">In a database file on your own PC (or your LAN host PC). Backups are encrypted files you place wherever you choose — an external drive, a second PC, a safe. No copy ever exists on our side; we couldn't read your data if we wanted to.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q5">Can I get my data out if I leave?</summary>
+      <p data-i18n="a5">Yes — CSV export of your records is built in and never locked, even on an expired trial. Your data is yours; holding it hostage would contradict the entire point of the product.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q6">What does the audit trail actually prove?</summary>
+      <p data-i18n="a6">Every significant action is written to a hash-chained log — each entry is mathematically linked to the previous one. If anyone edits or deletes a past entry, the chain visibly breaks. You can verify the chain from inside the app at any time and show an inspector that records were not silently altered.</p>
+    </details>
+
+    <h2 class="serif" style="font-size:22px;margin:34px 0 14px" data-i18n="g3T">Licensing &amp; payment</h2>
+
+    <details class="faq rv">
+      <summary data-i18n="q7">Is this a subscription?</summary>
+      <p data-i18n="a7">No. You pay once and the license is perpetual — it never expires. There's an optional yearly updates-and-support plan; if you skip it, LabFlow keeps working forever on the version you have. No lock-in, no ransom.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q8">The license is locked to one device — what if that PC dies?</summary>
+      <p data-i18n="a8">License reissue for a replacement PC is always free, whether or not you're on the updates plan. Restore your encrypted backup on the new machine, request a reissue, and you're back. Perpetual means perpetual.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q9">How do I pay in Kuwait?</summary>
+      <p data-i18n="a9">KNET payment link, bank transfer to a local IBAN, or cash on an in-person visit. You receive a signed installer plus your license key by email and WhatsApp — typically same day after payment clears. Every purchase has a 30-day money-back guarantee.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q10">What happens when the 14-day trial ends?</summary>
+      <p data-i18n="a10">The app switches to read-only: you can view and export everything you entered, but not add new records until a license is activated. Nothing is deleted. If you need longer than 14 days to evaluate seriously, ask about the 90-day pilot instead.</p>
+    </details>
+
+    <h2 class="serif" style="font-size:22px;margin:34px 0 14px" data-i18n="g4T">Practical details</h2>
+
+    <details class="faq rv">
+      <summary data-i18n="q11">What hardware do I need?</summary>
+      <p data-i18n="a11">Any ordinary Windows 10 or 11 PC from the last several years — 4 GB RAM is enough. No server, no IT department. If your PC runs a browser comfortably, it runs LabFlow.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q12">Is the Arabic real or machine-translated?</summary>
+      <p data-i18n="a12">Real. Every screen, report, and label is professionally written in Arabic with true right-to-left layout — not a mirrored English interface. You can switch language instantly, and print a report in Arabic for one client and English for the next.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q13">What support do I get, and from whom?</summary>
+      <p data-i18n="a13">Directly from the developer — WhatsApp and email, in Arabic or English. Licensed labs on the updates plan get priority (same business day). There is no call center and no ticket queue; you talk to the person who wrote the software.</p>
+    </details>
+    <details class="faq rv">
+      <summary data-i18n="q14">Is LabFlow ISO 17025 certified?</summary>
+      <p data-i18n="a14">Software cannot be ISO certified — only laboratories can. What LabFlow does is support your accreditation work: tamper-evident records, enforced second-person verification, controlled reports, and complete audit trails map to what assessors ask to see. We say this plainly because vendors who claim "ISO certified software" are misleading you.</p>
+    </details>
+
+    <h2 class="serif" style="font-size:22px;margin:34px 0 14px" data-i18n="g5T">What LabFlow doesn't do (yet)</h2>
+
+    <details class="faq rv" open>
+      <summary data-i18n="q15">What should I know before buying?</summary>
+      <p data-i18n-html="a15">Three honest limits. <strong>No live analyzer interfaces</strong> — results enter by hand or by CSV import; direct ASTM/HL7 connections are on the roadmap, not in the box. <strong>No insurance billing</strong> — invoicing is basic; there is no claims submission. <strong>No patient portal</strong> — offline-by-design means no web access for patients. If any of these is essential to you today, we'd rather tell you now than after you've paid — see the <a class="textlink" href="compare.html">comparison page</a> for who serves those needs better.</p>
+    </details>
+
+    <div class="pilot-cta rv" style="margin-top:44px">
+      <div class="pilot-cta-txt">
+        <h3 class="serif" data-i18n="ctaTitle">Still have a question?</h3>
+        <p data-i18n="ctaSub">Ask it on a 20-minute demo call — in Arabic or English — or just download the trial and see for yourself.</p>
+      </div>
+      <a class="btn pilot-btn" href="demo.html" data-i18n="ctaBtn">Book a demo</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-base" style="border-top:0;padding-top:0">
+      <span data-i18n="footNote">© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
+      <span><a class="textlink" href="index.html" data-i18n="ftHome">Home</a> · <a class="textlink" href="pricing.html" data-i18n="ftPricing">Pricing</a> · <a class="textlink" href="demo.html" data-i18n="ftDemo">Book a demo</a> · <a class="textlink" href="privacy.html" data-i18n="ftPrivacy">Privacy</a> · <a class="textlink" href="terms.html" data-i18n="ftTerms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.I18N = { ar: {
+  navFeatures:"المزايا", navIndustries:"القطاعات", navCompare:"المقارنة", navPricing:"الأسعار", navFaq:"الأسئلة", navSecurity:"الأمان", navCta:"احجز عرضاً",
+  headLabel:"الأسئلة · إجابات صريحة",
+  headTitle:"كل ما يسأله الناس قبل أن يأتمنونا <em>على مختبرهم</em>",
+  headSub:"إجابات قصيرة دون مراوغة. إن لم يكن سؤالك هنا، اطرحه في مكالمة العرض — والقسم الأخير يغطي ما لا يفعله لابفلو عمداً.",
+  g1T:"العمل دون إنترنت",
+  q1:"هل يعمل لابفلو فعلاً دون أي إنترنت؟",
+  a1:"نعم — تماماً. يعمل التطبيق على جهازك ويخزّن البيانات على جهازك ويحجب طلباته الصادرة للشبكة بنفسه. حتى تفعيل الرخصة يتم دون اتصال. يمكنك تشغيل مختبر في قبوٍ بلا اتصال، إلى ما لا نهاية.",
+  q2:"إذاً كيف تتشارك عدة أجهزة قاعدة بيانات واحدة؟",
+  a2:"عبر شبكتكم المحلية (LAN) — دون إنترنت إطلاقاً. جهاز واحد يستضيف قاعدة البيانات والبقية تنضم إليه. يعثر لابفلو على المضيف تلقائياً على الشبكة، فلا إعداد سوى اختيار الجهاز المضيف.",
+  q3:"كيف أحصل على التحديثات وأنا دون اتصال؟",
+  a3:"تصدر التحديثات كملف مثبّت موقّع. نزّله على أي جهاز متصل وانقله على ذاكرة USB إن شئت ثم شغّله. قاعدة بياناتك وإعداداتك لا يمسّها التحديث، والتحديث ليس إلزامياً أبداً — كل إصدار يستمر بالعمل.",
+  g2T:"بياناتك",
+  q4:"أين تُخزَّن بياناتي بالضبط؟",
+  a4:"في ملف قاعدة بيانات على جهازك (أو الجهاز المضيف في الشبكة). النسخ الاحتياطية ملفات مشفّرة تضعها حيث تشاء — قرص خارجي أو جهاز ثانٍ أو خزنة. لا توجد نسخة لدينا إطلاقاً؛ ولا يمكننا قراءة بياناتك حتى لو أردنا.",
+  q5:"هل أستطيع إخراج بياناتي إذا غادرت؟",
+  a5:"نعم — تصدير CSV لسجلاتك مدمج ولا يُقفل أبداً، حتى بعد انتهاء التجربة. بياناتك ملكك؛ واحتجازها يناقض فكرة المنتج كلها.",
+  q6:"ماذا يثبت سجل التدقيق فعلياً؟",
+  a6:"كل إجراء مهم يُكتب في سجل مسلسل بالتجزئة — كل قيد مرتبط رياضياً بما قبله. إذا عدّل أحد قيداً سابقاً أو حذفه، تنكسر السلسلة بشكل ظاهر. يمكنك التحقق من السلسلة من داخل التطبيق في أي وقت وإثبات للمفتش أن السجلات لم تُغيَّر خفيةً.",
+  g3T:"الترخيص والدفع",
+  q7:"هل هو اشتراك؟",
+  a7:"لا. تدفع مرة واحدة والرخصة دائمة — لا تنتهي أبداً. هناك خطة سنوية اختيارية للتحديثات والدعم؛ إن تجاوزتها يستمر لابفلو بالعمل للأبد على النسخة التي لديك. لا احتجاز ولا فدية.",
+  q8:"الرخصة مقفلة على جهاز واحد — ماذا لو تعطّل؟",
+  a8:"إعادة إصدار الرخصة لجهاز بديل مجانية دائماً، سواء كنت على خطة التحديثات أم لا. استعد نسختك الاحتياطية المشفّرة على الجهاز الجديد واطلب إعادة الإصدار وتابع عملك. دائمة تعني دائمة.",
+  q9:"كيف أدفع في الكويت؟",
+  a9:"رابط دفع كي-نت، أو تحويل بنكي إلى آيبان محلي، أو نقداً في زيارة ميدانية. تستلم مثبّتاً موقّعاً ومفتاح رخصتك عبر البريد والواتساب — عادةً في اليوم نفسه بعد تأكيد الدفع. ولكل عملية شراء ضمان استرداد خلال ٣٠ يوماً.",
+  q10:"ماذا يحدث عند انتهاء تجربة الـ١٤ يوماً؟",
+  a10:"يتحول التطبيق للقراءة فقط: تستطيع عرض وتصدير كل ما أدخلته، دون إضافة سجلات جديدة حتى تفعيل رخصة. لا يُحذف شيء. وإن احتجت أكثر من ١٤ يوماً لتقييم جاد، اسأل عن التجربة الميدانية لمدة ٩٠ يوماً.",
+  g4T:"تفاصيل عملية",
+  q11:"ما العتاد المطلوب؟",
+  a11:"أي جهاز ويندوز ١٠ أو ١١ عادي من السنوات الأخيرة — ٤ جيجابايت ذاكرة تكفي. لا خادم ولا قسم تقني. إن كان جهازك يشغّل متصفحاً بارتياح فهو يشغّل لابفلو.",
+  q12:"هل العربية حقيقية أم ترجمة آلية؟",
+  a12:"حقيقية. كل شاشة وتقرير وملصق مكتوب بعربية سليمة وبتخطيط يمين-يسار حقيقي — لا واجهة إنجليزية معكوسة. تبدّل اللغة فوراً، وتطبع تقريراً بالعربية لعميل وبالإنجليزية للذي يليه.",
+  q13:"ما الدعم الذي أحصل عليه وممّن؟",
+  a13:"من المطوّر مباشرة — واتساب وبريد، بالعربية أو الإنجليزية. المختبرات المرخّصة على خطة التحديثات لها أولوية (نفس يوم العمل). لا مركز اتصال ولا طابور تذاكر؛ تتحدث مع من كتب البرنامج.",
+  q14:"هل لابفلو حاصل على شهادة آيزو 17025؟",
+  a14:"البرمجيات لا تُعتمد بشهادة آيزو — المختبرات فقط. ما يفعله لابفلو هو دعم مسار اعتمادك: سجلات مقاومة للتلاعب، واعتماد إلزامي من شخص ثانٍ، وتقارير مضبوطة، وسجلات تدقيق كاملة تقابل ما يطلبه المقيّمون. نقولها بوضوح لأن من يدّعي «برنامج معتمد آيزو» يضللك.",
+  g5T:"ما لا يفعله لابفلو (بعد)",
+  q15:"ما الذي يجب أن أعرفه قبل الشراء؟",
+  a15:"ثلاثة حدود بصراحة. <strong>لا ربط مباشر بأجهزة التحليل</strong> — النتائج تُدخل يدوياً أو باستيراد CSV؛ الربط المباشر على خارطة الطريق وليس في الصندوق. <strong>لا فوترة تأمين</strong> — الفواتير أساسية ولا يوجد تقديم مطالبات. <strong>لا بوابة مرضى</strong> — التصميم دون اتصال يعني عدم وجود وصول إلكتروني للمرضى. إن كان أيٌّ من هذه أساسياً لك اليوم، نفضّل إخبارك الآن لا بعد الدفع — راجع <a class=\"textlink\" href=\"compare.html\">صفحة المقارنة</a> لمعرفة من يخدم تلك الاحتياجات أفضل.",
+  ctaTitle:"ما زال لديك سؤال؟",
+  ctaSub:"اطرحه في مكالمة عرض لمدة ٢٠ دقيقة — بالعربية أو الإنجليزية — أو نزّل التجربة وشاهد بنفسك.",
+  ctaBtn:"احجز عرضاً",
+  footNote:"© 2026 لابفلو — نظام معلومات مختبرات يعمل دون إنترنت. جميع الحقوق محفوظة.",
+  ftHome:"الرئيسية", ftPricing:"الأسعار", ftDemo:"احجز عرضاً", ftPrivacy:"الخصوصية", ftTerms:"الشروط"
+}};
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

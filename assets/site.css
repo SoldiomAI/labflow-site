@@ -288,3 +288,45 @@ html.js .rv.in{opacity:1;transform:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   .tour-tab{min-width:33%}
 }
+
+/* ---- lead form (demo.html) ---- */
+.demo-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;margin-top:8px}
+@media(max-width:860px){.demo-grid{grid-template-columns:1fr}}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.form-grid .full{grid-column:1/-1}
+.field label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;font-size:15px;font-family:var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line2);border-radius:0}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--pine);outline-offset:-1px;border-color:var(--pine)}
+.field textarea{min-height:110px;resize:vertical}
+.form-note{font-size:13px;color:var(--ink3);margin-top:16px}
+.form-ok{border:1px solid var(--pine);background:var(--pine-pale);padding:26px 28px;font-size:15.5px}
+.form-err{border:1px solid #a33;background:#f7e9e9;padding:16px 18px;font-size:14px;margin-top:16px}
+.form-err .btn{margin-top:12px}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+/* ---- comparison table (compare.html) ---- */
+.cmp-scroll{overflow-x:auto;margin-top:8px}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;min-width:760px}
+.cmp th,.cmp td{border:1px solid var(--line2);padding:12px 14px;text-align:left;vertical-align:top}
+[dir=rtl] .cmp th,[dir=rtl] .cmp td{text-align:right}
+.cmp thead th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);background:var(--paper2)}
+.cmp .yes{color:var(--pine);font-weight:600}
+.cmp .no{color:#a33}
+.cmp .part{color:var(--amber);font-weight:600}
+.cmp .us{background:var(--pine-pale)}
+.cmp .rowh{font-weight:600;white-space:nowrap}
+
+/* ---- industry sections (industries.html) ---- */
+.vert{padding:34px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start}
+@media(max-width:860px){.vert{grid-template-columns:1fr}}
+.vert h3{font-size:20px;margin-bottom:8px}
+.vert .who{font-size:13.5px;color:var(--ink3)}
+.vert ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14.5px;color:var(--ink2)}
+.vert li{display:flex;gap:10px}.vert li::before{content:"—";color:var(--pine);flex:none}
+.vert .hon{margin-top:14px;font-size:13.5px;color:var(--ink3);border-inline-start:3px solid var(--line2);padding-inline-start:12px}
+
+/* ---- pricing page extras ---- */
+.founding-band{border:1px solid var(--pine);background:var(--pine-pale);padding:20px 26px;display:flex;flex-direction:column;gap:6px}
+.founding-band p{font-size:15px;color:var(--ink2);margin:0}
+.price-foot{font-size:13.5px;color:var(--ink3);margin-top:18px}

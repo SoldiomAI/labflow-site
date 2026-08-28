@@ -34,6 +34,11 @@
   "image": "https://soldiomai.github.io/labflow-site/assets/dashboard-light.png",
   "softwareVersion": "1.9.0",
   "inLanguage": ["en", "ar"],
+  "offers": [
+    {"@type":"Offer","name":"SOLO","price":"249","priceCurrency":"KWD","description":"1 PC — one-time perpetual license"},
+    {"@type":"Offer","name":"LAB","price":"449","priceCurrency":"KWD","description":"Up to 3 PCs on LAN — one-time perpetual license"},
+    {"@type":"Offer","name":"LAN PRO","price":"799","priceCurrency":"KWD","description":"Up to 10 PCs on LAN — one-time perpetual license"}
+  ],
   "featureList": [
     "100% offline operation",
     "Nine industry workspaces",
@@ -74,15 +79,15 @@
     <a class="brand" href="#"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
     <div class="nav-links">
       <a href="#features" data-i18n="navFeatures">Features</a>
-      <a href="#demo" data-i18n="navDemo">Demo</a>
-      <a href="#cost" data-i18n="navCompare">Compare</a>
+      <a href="industries.html" data-i18n="navIndustries">Industries</a>
+      <a href="compare.html" data-i18n="navCompare">Compare</a>
       <a href="security.html" data-i18n="navSecurity">Security</a>
-      <a href="#pricing" data-i18n="navPricing">Pricing</a>
-      <a href="#faq" data-i18n="navFaq">FAQ</a>
+      <a href="pricing.html" data-i18n="navPricing">Pricing</a>
+      <a href="faq.html" data-i18n="navFaq">FAQ</a>
     </div>
     <div class="nav-cta">
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
-      <a class="btn small" href="#contact" data-i18n="navCta">Request a trial</a>
+      <a class="btn small" href="demo.html" data-i18n="navCta">Book a demo</a>
     </div>
   </div>
 </nav>
@@ -93,12 +98,12 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow"><span class="tick"></span><span data-i18n="pillText">Version 1.6 · Windows desktop · works fully offline</span></div>
+      <div class="eyebrow"><span class="tick"></span><span data-i18n="pillText">Version 1.9 · Windows desktop · works fully offline</span></div>
       <h1 data-i18n-html="heroTitle">The laboratory system that <em>never phones home</em></h1>
       <p class="lead" data-i18n="heroSub">LabFlow is a complete LIMS for hospitals, clinics, pharmacies and nine industries. It runs entirely on your own computers — no cloud, no subscription servers, and no data ever leaving your building. English and Arabic, side by side.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#contact" data-i18n="heroCta1">Start a 14-day free trial</a>
-        <a class="btn alt" href="#demo" data-i18n="heroCta2">Watch the demo</a>
+        <a class="btn" href="demo.html" data-i18n="heroCta1">Book a 20-minute demo</a>
+        <a class="btn alt" href="#demo" data-i18n="heroCta2">Watch the demo film</a>
       </div>
       <div class="hero-note" data-i18n="heroNote">Installs in two minutes. No credit card, no signup, no internet required.</div>
     </div>
@@ -302,44 +307,45 @@
     <p class="lead" style="margin-bottom:36px" data-i18n="prSub">Cloud LIMS subscriptions commonly start around $500 per month, indefinitely, with your data on someone else's servers. LabFlow is a one-time purchase that lives on your hardware.</p>
     <div class="price-grid rv">
       <div class="price">
-        <div class="plan" data-i18n="p1n">Trial</div>
-        <div class="amt" data-i18n="p1a">Free</div>
-        <div class="per" data-i18n="p1per">14 days · full product</div>
+        <div class="plan" data-i18n="p1n">SOLO</div>
+        <div class="amt" data-i18n="p1a">249 KWD</div>
+        <div class="per" data-i18n="p1per">≈ $810 · one-time · 1 PC</div>
         <ul>
-          <li data-i18n="p1f1">Every feature unlocked</li>
-          <li data-i18n="p1f2">All nine industry workspaces</li>
-          <li data-i18n="p1f3">No credit card, no signup</li>
-          <li data-i18n="p1f4">Your data carries over if you buy</li>
+          <li data-i18n="p1f1">The full product on one PC — nothing locked</li>
+          <li data-i18n="p1f2">Signed EN/AR reports, audit trail, backups</li>
+          <li data-i18n="p1f3">1 year of updates &amp; support included</li>
+          <li data-i18n="p1f4">Don't renew? It keeps working — forever</li>
         </ul>
-        <a class="btn alt" href="#contact" data-i18n="p1cta">Request the installer</a>
+        <a class="btn alt" href="pricing.html" data-i18n="p1cta">See full pricing</a>
       </div>
       <div class="price hot">
-        <div class="hot-tag" data-i18n="p2tag">Most chosen</div>
-        <div class="plan" data-i18n="p2n">Professional</div>
-        <div class="amt" data-i18n="p2a">One-time</div>
-        <div class="per" data-i18n="p2per">perpetual licence · per workstation</div>
+        <div class="hot-tag" data-i18n="p2tag">Most labs choose this</div>
+        <div class="plan" data-i18n="p2n">LAB</div>
+        <div class="amt" data-i18n="p2a">449 KWD</div>
+        <div class="per" data-i18n="p2per">≈ $1,460 · one-time · up to 3 PCs</div>
         <ul>
-          <li data-i18n="p2f1">Pay once, use it indefinitely</li>
-          <li data-i18n="p2f2">Licence key locked to your device</li>
-          <li data-i18n="p2f3">All features, both languages</li>
-          <li data-i18n="p2f4">Free updates for one year</li>
-          <li data-i18n="p2f5">Priority email support</li>
+          <li data-i18n="p2f1">Up to 3 PCs sharing one database over your LAN</li>
+          <li data-i18n="p2f2">Roles per user — admin, analyst, QA, registration</li>
+          <li data-i18n="p2f3">Remote LAN setup assistance included</li>
+          <li data-i18n="p2f4">Priority WhatsApp support, same business day</li>
+          <li data-i18n="p2f5">1 year of updates &amp; support included</li>
         </ul>
-        <a class="btn" href="#contact" data-i18n="p2cta">Request a quote</a>
+        <a class="btn" href="demo.html" data-i18n="p2cta">Book a demo</a>
       </div>
       <div class="price">
-        <div class="plan" data-i18n="p3n">Enterprise</div>
-        <div class="amt" data-i18n="p3a">Custom</div>
-        <div class="per" data-i18n="p3per">multi-seat · LAN deployment</div>
+        <div class="plan" data-i18n="p3n">LAN PRO</div>
+        <div class="amt" data-i18n="p3a">799 KWD</div>
+        <div class="per" data-i18n="p3per">≈ $2,600 · one-time · up to 10 PCs</div>
         <ul>
-          <li data-i18n="p3f1">Multiple workstations over LAN</li>
-          <li data-i18n="p3f2">Deployment and training session</li>
-          <li data-i18n="p3f3">Custom terminology and branding</li>
+          <li data-i18n="p3f1">Whole-lab coverage — up to 10 PCs</li>
+          <li data-i18n="p3f2">Onboarding session, remote or on-site in Kuwait</li>
+          <li data-i18n="p3f3">We import your existing test catalog for you</li>
           <li data-i18n="p3f4">A direct line to the builder</li>
         </ul>
-        <a class="btn alt" href="#contact" data-i18n="p3cta">Talk to us</a>
+        <a class="btn alt" href="demo.html" data-i18n="p3cta">Talk to us</a>
       </div>
     </div>
+    <p class="price-foot rv" data-i18n-html="prFoot">All licenses are perpetual and device-locked · 14-day free trial · 30-day money-back guarantee · <a class="textlink" href="pricing.html">full pricing details and the founding-labs offer →</a></p>
     <div class="pilot-cta rv" id="pilot">
       <div class="pilot-cta-txt">
         <div class="mono-label" style="color:inherit;opacity:.7;margin-bottom:10px" data-i18n="piTag">Founding pilot · 3 seats</div>
@@ -366,6 +372,7 @@
       <details><summary><span class="q-n">9.7</span><span class="q-t" data-i18n="q7">How do updates work with no internet?</span><span class="q-m"></span></summary><div class="a" data-i18n="a7">Each release is a fresh installer published with SHA-256 checksums and a software bill of materials. Download it on any connected machine, carry it over on a USB drive, and install — your database and settings are preserved.</div></details>
       <details><summary><span class="q-n">9.8</span><span class="q-t" data-i18n="q8">Is LabFlow certified for ISO 17025?</span><span class="q-m"></span></summary><div class="a" data-i18n="a8">Accreditation applies to laboratories, not to software. LabFlow is built around ISO 17025-minded workflows — audit trails, signed reports, calibration records — and we will gladly walk your quality team through how each control maps to your requirements.</div></details>
     </div>
+    <p style="margin-top:20px"><a class="textlink" href="faq.html" data-i18n="faqMore">More questions answered — payment, hardware, support, and what we don't do yet →</a></p>
   </div>
 </section>
 
@@ -374,8 +381,9 @@
   <div class="wrap final-in">
     <div>
       <h2 data-i18n-html="finalTitle">Retire the spreadsheet. <em>Keep the data.</em></h2>
-      <p class="lead" data-i18n="finalSub">One short request gets you the installer and a 14-day trial — no sales calls, no card.</p>
-      <a class="btn" id="mailCta" href="https://github.com/SoldiomAI/labflow-site/issues/new?template=trial-request.yml" target="_blank" rel="noopener" data-i18n="finalCta1">Request your trial</a>
+      <p class="lead" data-i18n="finalSub">Book a 20-minute demo in Arabic or English — or request the installer and try it yourself for 14 days.</p>
+      <a class="btn" id="mailCta" href="demo.html" data-i18n="finalCta1">Book a demo</a>
+      <p style="margin-top:14px;font-size:14px"><a class="textlink" href="https://github.com/SoldiomAI/labflow-site/issues/new?template=trial-request.yml" target="_blank" rel="noopener" data-i18n="finalCta2">Prefer self-serve? Request the trial installer →</a></p>
     </div>
     <div class="contact-box rv">
       <div class="k" data-i18n="cbK">What you'll receive</div>
@@ -400,7 +408,9 @@
         <a href="#features" data-i18n="fcProd1">Features</a>
         <a href="#tour" data-i18n="fcProd2">Product tour</a>
         <a href="#demo" data-i18n="fcProd3">Demo film</a>
-        <a href="#pricing" data-i18n="fcProd4">Pricing</a>
+        <a href="pricing.html" data-i18n="fcProd4">Pricing</a>
+        <a href="industries.html" data-i18n="fcProd6">Industries</a>
+        <a href="compare.html" data-i18n="fcProd7">Compare</a>
         <a href="changelog.html" data-i18n="fcProd5">Changelog</a>
       </div>
       <div class="foot-col">
@@ -409,10 +419,12 @@
         <a href="#licensing" data-i18n="fcTrust2">Licensing model</a>
         <a href="privacy.html" data-i18n="fcTrust3">Privacy</a>
         <a href="terms.html" data-i18n="fcTrust4">Terms</a>
+        <a href="faq.html" data-i18n="fcTrust5">FAQ</a>
       </div>
       <div class="foot-col">
         <div class="k" data-i18n="fcContactK">Contact</div>
-        <a href="https://github.com/SoldiomAI/labflow-site/issues/new?template=trial-request.yml" target="_blank" rel="noopener" data-i18n="fcContact1">Request a trial</a>
+        <a href="demo.html" data-i18n="fcContact1">Book a demo</a>
+        <a href="https://github.com/SoldiomAI/labflow-site/issues/new?template=trial-request.yml" target="_blank" rel="noopener" data-i18n="fcContact3">Request a trial</a>
         <a href="https://github.com/Soldiom" target="_blank" rel="noopener" data-i18n="fcContact2">Built by Soldiom</a>
       </div>
     </div>
@@ -426,12 +438,12 @@
 <script>
 window.I18N = {
   ar: {
-    navFeatures:"المميزات", navDemo:"العرض", navCompare:"المقارنة", navSecurity:"الأمان", navPricing:"الأسعار", navFaq:"الأسئلة",
-    navCta:"اطلب تجربة",
-    pillText:"الإصدار 1.6 · تطبيق ويندوز · يعمل دون اتصال بالكامل",
+    navFeatures:"المميزات", navIndustries:"القطاعات", navCompare:"المقارنة", navSecurity:"الأمان", navPricing:"الأسعار", navFaq:"الأسئلة",
+    navCta:"احجز عرضاً",
+    pillText:"الإصدار 1.9 · تطبيق ويندوز · يعمل دون اتصال بالكامل",
     heroTitle:"نظام المختبرات الذي <em>لا يتصل بأحد</em>",
     heroSub:"لابفلو نظام LIMS متكامل للمستشفيات والعيادات والصيدليات وتسع صناعات. يعمل بالكامل على أجهزتكم — لا سحابة، لا خوادم اشتراك، ولا تغادر بياناتكم مبناكم أبداً. عربي وإنجليزي جنباً إلى جنب.",
-    heroCta1:"ابدأ تجربة 14 يوماً مجاناً", heroCta2:"شاهد العرض",
+    heroCta1:"احجز عرضاً — ٢٠ دقيقة", heroCta2:"شاهد فيلم العرض",
     heroNote:"يُثبَّت في دقيقتين. دون بطاقة أو تسجيل أو إنترنت.",
     specK:"النشر", specV:"مثبّت واحد · قاعدة بيانات محلية · تعدد مستخدمين اختياري عبر الشبكة",
     stat1:"دون إنترنت — صفر اعتماد على السحابة", stat2:"مساحات عمل صناعية جاهزة",
@@ -503,15 +515,16 @@ window.I18N = {
     prLabel:"٠٨ · الأسعار",
     prTitle:"امتلك نظامك — <em>لا تستأجره</em>",
     prSub:"اشتراكات LIMS السحابية تبدأ عادة من نحو 500$ شهرياً، إلى ما لا نهاية، وبياناتك على خوادم غيرك. لابفلو شراء لمرة واحدة يعيش على أجهزتك.",
-    p1n:"تجربة", p1a:"مجاناً", p1per:"14 يوماً · المنتج كاملاً",
-    p1f1:"كل الميزات مفتوحة", p1f2:"جميع مساحات العمل التسع", p1f3:"دون بطاقة أو تسجيل", p1f4:"بياناتك تنتقل معك عند الشراء",
-    p1cta:"اطلب المثبّت",
-    p2tag:"الأكثر اختياراً", p2n:"احترافي", p2a:"دفعة واحدة", p2per:"رخصة دائمة · لكل جهاز",
-    p2f1:"ادفع مرة واستخدمه بلا حدود", p2f2:"مفتاح مرتبط بجهازك", p2f3:"كل الميزات، باللغتين",
-    p2f4:"تحديثات مجانية لسنة", p2f5:"دعم بريدي ذو أولوية", p2cta:"اطلب عرض سعر",
-    p3n:"مؤسسات", p3a:"مخصص", p3per:"أجهزة متعددة · نشر شبكي",
-    p3f1:"عدة أجهزة عبر الشبكة المحلية", p3f2:"جلسة نشر وتدريب", p3f3:"مصطلحات وهوية مخصصة", p3f4:"تواصل مباشر مع المطوّر",
-    p3cta:"تواصل معنا",
+    p1n:"سولو", p1a:"٢٤٩ د.ك", p1per:"≈ ٨١٠ دولاراً · دفعة واحدة · جهاز واحد",
+    p1f1:"المنتج كاملاً على جهاز واحد — دون أي قفل", p1f2:"تقارير موقّعة عربي/إنجليزي وسجل تدقيق ونسخ احتياطية", p1f3:"سنة من التحديثات والدعم مشمولة", p1f4:"لم تجدد؟ يستمر بالعمل — للأبد",
+    p1cta:"كل تفاصيل الأسعار",
+    p2tag:"اختيار معظم المختبرات", p2n:"لاب", p2a:"٤٤٩ د.ك", p2per:"≈ ١,٤٦٠ دولاراً · دفعة واحدة · حتى ٣ أجهزة",
+    p2f1:"حتى ٣ أجهزة تتشارك قاعدة بيانات واحدة عبر شبكتكم", p2f2:"أدوار لكل مستخدم — مدير ومحلل وجودة واستقبال", p2f3:"مساعدة إعداد الشبكة عن بُعد مشمولة",
+    p2f4:"دعم واتساب بأولوية، نفس يوم العمل", p2f5:"سنة من التحديثات والدعم مشمولة", p2cta:"احجز عرضاً",
+    p3n:"لان برو", p3a:"٧٩٩ د.ك", p3per:"≈ ٢,٦٠٠ دولار · دفعة واحدة · حتى ١٠ أجهزة",
+    p3f1:"تغطية المختبر كاملاً — حتى ١٠ أجهزة", p3f2:"جلسة تهيئة، عن بُعد أو حضورياً في الكويت", p3f3:"نستورد كتالوج فحوصاتكم الحالي بأنفسنا", p3f4:"تواصل مباشر مع المطوّر",
+    p3cta:"تحدث معنا",
+    prFoot:"جميع الرخص دائمة ومقفلة على الجهاز · تجربة ١٤ يوماً مجاناً · ضمان استرداد ٣٠ يوماً · <a class=\"textlink\" href=\"pricing.html\">كل تفاصيل الأسعار وعرض المختبرات المؤسِّسة ←</a>",
     piTag:"برنامج تجريبي تأسيسي · ٣ مقاعد",
     piTitle:"شغّل مختبرك على لابفلو ٩٠ يوماً — مجاناً",
     piSub:"نستقبل ثلاثة مختبرات حقيقية كشركاء تجربة تأسيسيين. تحصل على المنتج كاملاً ومساعدة في الإعداد وتواصلاً مباشراً مع المطوّر لمدة ٩٠ يوماً دون مقابل. في المقابل، تُشغّل عينات حقيقية عليه وتخبرنا الحقيقة مرة كل أسبوع. المختبرات التأسيسية تحتفظ بأفضلية سعرية دائمة عند الشراء.",
@@ -526,17 +539,19 @@ window.I18N = {
     q6:"هل هو ثنائي اللغة فعلاً؟", a6:"بالكامل. كل شاشة وتقرير وملصق يعمل بالعربية والإنجليزية بتخطيط يميني حقيقي. كل مستخدم يبدّل من الإعدادات — لكل حساب، لا لكل تثبيت.",
     q7:"كيف تعمل التحديثات دون إنترنت؟", a7:"كل إصدار مثبّت جديد يُنشر مع مجاميع SHA-256 وقائمة مكوّنات برمجية. حمّله على أي جهاز متصل، وانقله على قرص USB، وثبّت — قاعدة بياناتك وإعداداتك محفوظة.",
     q8:"هل لابفلو معتمد وفق ISO 17025؟", a8:"الاعتماد يخص المختبرات لا البرمجيات. لابفلو مبني حول تدفقات عمل بعقلية ISO 17025 — سجلات تدقيق وتقارير موقّعة وسجلات معايرة — ويسعدنا أن نستعرض مع فريق الجودة لديك كيف تطابق كل آلية متطلباتكم.",
+    faqMore:"مزيد من الأسئلة والإجابات — الدفع والعتاد والدعم وما لا نفعله بعد ←",
     finalTitle:"أحل الجداول الممتدة على التقاعد. <em>واحتفظ بالبيانات.</em>",
-    finalSub:"طلب قصير واحد يصلك بالمثبّت وتجربة 14 يوماً — دون مكالمات مبيعات أو بطاقة.",
-    finalCta1:"اطلب تجربتك",
+    finalSub:"احجز عرضاً لمدة ٢٠ دقيقة بالعربية أو الإنجليزية — أو اطلب المثبّت وجرّبه بنفسك ١٤ يوماً.",
+    finalCta1:"احجز عرضاً",
+    finalCta2:"تفضّل الخدمة الذاتية؟ اطلب مثبّت التجربة ←",
     cbK:"ما الذي ستستلمه",
     cb1:"مثبّت ويندوز موقّع ومع مجاميع تحقق",
     cb2:"دليل بدء سريع لمساحة عمل صناعتك",
     cb3:"14 يوماً من المنتج الكامل — ثم القرار لك",
     footAbout:"إدارة معلومات مختبرات تعمل دون اتصال، للمستشفيات والعيادات والصيدليات والصناعة. ثنائية اللغة بالتصميم.",
-    fcProdK:"المنتج", fcProd1:"المميزات", fcProd2:"جولة في المنتج", fcProd3:"فيلم العرض", fcProd4:"الأسعار", fcProd5:"سجل الإصدارات",
-    fcTrustK:"الثقة", fcTrust1:"ملف الأمان", fcTrust2:"نموذج الترخيص", fcTrust3:"الخصوصية", fcTrust4:"الشروط",
-    fcContactK:"التواصل", fcContact1:"اطلب تجربة", fcContact2:"من تطوير Soldiom",
+    fcProdK:"المنتج", fcProd1:"المميزات", fcProd2:"جولة في المنتج", fcProd3:"فيلم العرض", fcProd4:"الأسعار", fcProd5:"سجل الإصدارات", fcProd6:"القطاعات", fcProd7:"المقارنة",
+    fcTrustK:"الثقة", fcTrust1:"ملف الأمان", fcTrust2:"نموذج الترخيص", fcTrust3:"الخصوصية", fcTrust4:"الشروط", fcTrust5:"الأسئلة",
+    fcContactK:"التواصل", fcContact1:"احجز عرضاً", fcContact2:"من تطوير Soldiom", fcContact3:"اطلب تجربة",
     footNote:"© 2026 لابفلو LIMS — برمجيات مختبرات دون اتصال. جميع الحقوق محفوظة.",
     footTag:"صُنع لمختبرات تمتلك بياناتها."
   }

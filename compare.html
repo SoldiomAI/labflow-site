@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare — LabFlow vs paper, Excel, cloud LIMS and enterprise LIMS</title>
+<meta name="description" content="An honest comparison: LabFlow against the paper register, Excel, cloud LIMS subscriptions and enterprise LIMS — including where each alternative genuinely wins.">
+<link rel="canonical" href="https://soldiomai.github.io/labflow-site/compare.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="theme-color" content="#faf9f6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LabFlow LIMS — honest comparison">
+<meta property="og:description" content="Paper register vs Excel vs cloud LIMS vs enterprise LIMS vs LabFlow — costs, offline, Arabic, audit trails. Including where we lose.">
+<meta property="og:image" content="https://soldiomai.github.io/labflow-site/assets/dashboard-light.png">
+<meta property="og:url" content="https://soldiomai.github.io/labflow-site/compare.html">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
+    <div class="nav-links">
+      <a href="index.html#features" data-i18n="navFeatures">Features</a>
+      <a href="industries.html" data-i18n="navIndustries">Industries</a>
+      <a href="compare.html" style="color:var(--pine)" data-i18n="navCompare">Compare</a>
+      <a href="pricing.html" data-i18n="navPricing">Pricing</a>
+      <a href="faq.html" data-i18n="navFaq">FAQ</a>
+      <a href="security.html" data-i18n="navSecurity">Security</a>
+    </div>
+    <div class="nav-cta">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+      <a class="btn small" href="demo.html" data-i18n="navCta">Book a demo</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="sec-label"><span data-i18n="headLabel">Comparison · Written to be checked</span></div>
+    <h1 data-i18n-html="headTitle">Every option on the table — <em>including where we lose</em></h1>
+    <p class="lead" data-i18n="headSub">Most comparison pages are advertisements with borders. This one includes the rows vendors leave out: what LabFlow does not do, and when a paper register or an enterprise system is genuinely the better choice.</p>
+  </div>
+</header>
+
+<section style="padding-top:28px">
+  <div class="wrap">
+    <div class="cmp-scroll rv">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th data-i18n="c0"></th>
+            <th data-i18n="cPaper">Paper register</th>
+            <th data-i18n="cExcel">Excel / Sheets</th>
+            <th data-i18n="cCloud">Cloud LIMS (SaaS)</th>
+            <th data-i18n="cEnt">Enterprise LIMS</th>
+            <th class="us" data-i18n="cLf">LabFlow</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rowh" data-i18n="r1">Upfront cost</td><td data-i18n="r1a">~ free</td><td data-i18n="r1b">~ free</td><td data-i18n="r1c">Low</td><td data-i18n="r1d">$50k–$500k + project</td><td class="us" data-i18n="r1e">One-time licence (published pricing)</td></tr>
+          <tr><td class="rowh" data-i18n="r2">Recurring cost</td><td data-i18n="r2a">Staff time, storage</td><td data-i18n="r2b">None</td><td data-i18n="r2c">$100–$500+ / month, forever</td><td data-i18n="r2d">Annual support contracts</td><td class="us" data-i18n="r2e">None required — optional updates plan</td></tr>
+          <tr><td class="rowh" data-i18n="r3">Works with no internet</td><td class="yes" data-i18n="r3a">Yes</td><td class="yes" data-i18n="r3b">Mostly</td><td class="no" data-i18n="r3c">No — internet is the product</td><td class="part" data-i18n="r3d">Varies (on-premise possible)</td><td class="us yes" data-i18n="r3e">Yes — designed for it, even activation</td></tr>
+          <tr><td class="rowh" data-i18n="r4">Where your data lives</td><td data-i18n="r4a">A cupboard</td><td data-i18n="r4b">Your PC (uncontrolled copies)</td><td data-i18n="r4c">Vendor's servers abroad</td><td data-i18n="r4d">Your servers</td><td class="us" data-i18n="r4e">Your PC — encrypted backups you control</td></tr>
+          <tr><td class="rowh" data-i18n="r5">Arabic with true RTL</td><td class="yes" data-i18n="r5a">Yes (handwriting)</td><td class="part" data-i18n="r5b">Partial, fragile</td><td class="no" data-i18n="r5c">Rarely</td><td class="no" data-i18n="r5d">Rarely, costly customisation</td><td class="us yes" data-i18n="r5e">Yes — every screen, report and label</td></tr>
+          <tr><td class="rowh" data-i18n="r6">Tamper-evident audit trail</td><td class="no" data-i18n="r6a">No — pages tear out</td><td class="no" data-i18n="r6b">No — edits leave no trace</td><td class="part" data-i18n="r6c">Usually logged</td><td class="yes" data-i18n="r6d">Yes</td><td class="us yes" data-i18n="r6e">Yes — hash-chained, verifiable on screen</td></tr>
+          <tr><td class="rowh" data-i18n="r7">Second-person verification</td><td class="part" data-i18n="r7a">A signature box, if used</td><td class="no" data-i18n="r7b">No</td><td class="yes" data-i18n="r7c">Yes</td><td class="yes" data-i18n="r7d">Yes</td><td class="us yes" data-i18n="r7e">Yes — author cannot approve own work</td></tr>
+          <tr><td class="rowh" data-i18n="r8">Signed PDF reports / CoA</td><td class="no" data-i18n="r8a">Handwritten</td><td class="part" data-i18n="r8b">Manual formatting</td><td class="yes" data-i18n="r8c">Yes</td><td class="yes" data-i18n="r8d">Yes</td><td class="us yes" data-i18n="r8e">Yes — bilingual, e-signed</td></tr>
+          <tr><td class="rowh" data-i18n="r9">Multiple users / PCs</td><td class="no" data-i18n="r9a">One book, one place</td><td class="no" data-i18n="r9b">File conflicts</td><td class="yes" data-i18n="r9c">Yes</td><td class="yes" data-i18n="r9d">Yes</td><td class="us yes" data-i18n="r9e">Yes — over your own LAN, with roles</td></tr>
+          <tr><td class="rowh" data-i18n="r10">Analyser / instrument interfaces</td><td class="no" data-i18n="r10a">—</td><td class="part" data-i18n="r10b">Copy-paste from exports</td><td class="part" data-i18n="r10c">On higher plans</td><td class="yes" data-i18n="r10d">Yes — their core strength</td><td class="us part" data-i18n="r10e">CSV import only — live interfaces not yet</td></tr>
+          <tr><td class="rowh" data-i18n="r11">Insurance claims / e-invoicing</td><td class="no" data-i18n="r11a">—</td><td class="no" data-i18n="r11b">—</td><td class="part" data-i18n="r11c">Regional medical SaaS: often yes</td><td class="part" data-i18n="r11d">Via integration projects</td><td class="us no" data-i18n="r11e">No — basic invoicing only today</td></tr>
+          <tr><td class="rowh" data-i18n="r12">Setup effort</td><td data-i18n="r12a">None</td><td data-i18n="r12b">Hours</td><td data-i18n="r12c">Days–weeks</td><td data-i18n="r12d">Months, consultants</td><td class="us" data-i18n="r12e">About an hour — wizard, no IT staff</td></tr>
+          <tr><td class="rowh" data-i18n="r13">If the vendor disappears</td><td class="yes" data-i18n="r13a">Nothing changes</td><td class="yes" data-i18n="r13b">Nothing changes</td><td class="no" data-i18n="r13c">Data export deadline, then gone</td><td class="part" data-i18n="r13d">Runs on, support ends</td><td class="us yes" data-i18n="r13e">Keeps working — perpetual licence, local data, CSV export anytime</td></tr>
+          <tr><td class="rowh" data-i18n="r14">Honestly best for</td><td data-i18n="r14a">A handful of samples a week</td><td data-i18n="r14b">Lists, not records of proof</td><td data-i18n="r14c">Labs wanting patient portals + billing, with reliable internet</td><td data-i18n="r14d">Hospital networks, high-throughput automation</td><td class="us" data-i18n="r14e">Small labs that must keep data in-house, work in Arabic/English, and own their tools</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose" style="margin-top:44px;max-width:780px">
+      <h2 data-i18n="wlT">When you should not buy LabFlow</h2>
+      <p data-i18n="wl1">— Your lab depends on live analyser connections (ASTM/HL7). We import CSV exports today; direct interfaces are on the roadmap but not in the box. An enterprise LIMS or a specialised medical SaaS will serve you better now.</p>
+      <p data-i18n="wl2">— You bill insurance companies daily. LabFlow's invoicing is basic; it does not talk to insurance systems.</p>
+      <p data-i18n="wl3">— You want a patient portal with online results. LabFlow keeps everything offline by design — that is the point, but it means no patient-facing web portal.</p>
+      <p data-i18n="wl4">If none of those describe you — and your register is paper or Excel — that is exactly the lab LabFlow was built for.</p>
+    </div>
+
+    <div class="pilot-cta rv" style="margin-top:44px">
+      <div class="pilot-cta-txt">
+        <h3 class="serif" data-i18n="ctaTitle">Check every claim on this page yourself</h3>
+        <p data-i18n="ctaSub">The 14-day trial is the full product with nothing locked. Or book a 20-minute demo and bring your hardest questions.</p>
+      </div>
+      <a class="btn pilot-btn" href="demo.html" data-i18n="ctaBtn">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-base" style="border-top:0;padding-top:0">
+      <span data-i18n="footNote">© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
+      <span><a class="textlink" href="index.html" data-i18n="ftHome">Home</a> · <a class="textlink" href="pricing.html" data-i18n="ftPricing">Pricing</a> · <a class="textlink" href="demo.html" data-i18n="ftDemo">Book a demo</a> · <a class="textlink" href="privacy.html" data-i18n="ftPrivacy">Privacy</a> · <a class="textlink" href="terms.html" data-i18n="ftTerms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.I18N = { ar: {
+  navFeatures:"المزايا", navIndustries:"القطاعات", navCompare:"المقارنة", navPricing:"الأسعار", navFaq:"الأسئلة", navSecurity:"الأمان", navCta:"احجز عرضاً",
+  headLabel:"المقارنة · كُتبت لتُدقَّق",
+  headTitle:"كل الخيارات على الطاولة — <em>حتى حيث نخسر</em>",
+  headSub:"معظم صفحات المقارنة إعلانات بجداول. هذه الصفحة تتضمن الصفوف التي يحذفها الباعة: ما لا يفعله لابفلو، ومتى يكون الدفتر الورقي أو النظام المؤسسي هو الخيار الأفضل فعلاً.",
+  c0:"", cPaper:"الدفتر الورقي", cExcel:"إكسل / جداول", cCloud:"LIMS سحابي (اشتراك)", cEnt:"LIMS مؤسسي", cLf:"لابفلو",
+  r1:"التكلفة الأولية", r1a:"شبه مجاني", r1b:"شبه مجاني", r1c:"منخفضة", r1d:"٥٠–٥٠٠ ألف دولار + مشروع", r1e:"رخصة تُدفع مرة واحدة (أسعار معلنة)",
+  r2:"التكلفة المتكررة", r2a:"وقت الموظفين والتخزين", r2b:"لا شيء", r2c:"١٠٠–٥٠٠+ دولار شهرياً، للأبد", r2d:"عقود دعم سنوية", r2e:"لا شيء إلزامي — خطة تحديثات اختيارية",
+  r3:"يعمل دون إنترنت", r3a:"نعم", r3b:"غالباً", r3c:"لا — الإنترنت هو المنتج", r3d:"يختلف (محلي ممكن)", r3e:"نعم — مصمم لذلك، حتى التفعيل",
+  r4:"أين تعيش بياناتك", r4a:"خزانة", r4b:"جهازك (نسخ بلا ضبط)", r4c:"خوادم المزوّد خارج البلد", r4d:"خوادمكم", r4e:"جهازك — ونسخ احتياطية مشفّرة بيدك",
+  r5:"عربية بواجهة يمين-يسار حقيقية", r5a:"نعم (بخط اليد)", r5b:"جزئية وهشّة", r5c:"نادراً", r5d:"نادراً وبتكلفة تخصيص", r5e:"نعم — كل شاشة وتقرير وملصق",
+  r6:"سجل تدقيق مقاوم للتلاعب", r6a:"لا — الصفحات تُنزع", r6b:"لا — التعديل لا يترك أثراً", r6c:"يُسجَّل عادةً", r6d:"نعم", r6e:"نعم — مسلسل بالتجزئة وقابل للتحقق على الشاشة",
+  r7:"اعتماد شخص ثانٍ", r7a:"خانة توقيع، إن استُخدمت", r7b:"لا", r7c:"نعم", r7d:"نعم", r7e:"نعم — لا يعتمد المحلل عمله بنفسه",
+  r8:"تقارير PDF موقّعة / شهادات تحليل", r8a:"بخط اليد", r8b:"تنسيق يدوي", r8c:"نعم", r8d:"نعم", r8e:"نعم — بلغتين وبتوقيع إلكتروني",
+  r9:"عدة مستخدمين / أجهزة", r9a:"دفتر واحد في مكان واحد", r9b:"تعارض ملفات", r9c:"نعم", r9d:"نعم", r9e:"نعم — عبر شبكتكم الخاصة وبأدوار",
+  r10:"ربط أجهزة التحليل", r10a:"—", r10b:"نسخ ولصق من التصدير", r10c:"في الخطط الأعلى", r10d:"نعم — قوتهم الأساسية", r10e:"استيراد CSV فقط — الربط المباشر ليس بعد",
+  r11:"مطالبات التأمين / الفوترة الإلكترونية", r11a:"—", r11b:"—", r11c:"أنظمة طبية إقليمية: غالباً نعم", r11d:"عبر مشاريع تكامل", r11e:"لا — فواتير أساسية فقط اليوم",
+  r12:"جهد الإعداد", r12a:"لا شيء", r12b:"ساعات", r12c:"أيام–أسابيع", r12d:"أشهر واستشاريون", r12e:"نحو ساعة — معالج إعداد، دون فريق تقني",
+  r13:"إذا اختفى المزوّد", r13a:"لا شيء يتغير", r13b:"لا شيء يتغير", r13c:"مهلة لتصدير البيانات ثم لا شيء", r13d:"يستمر التشغيل وينتهي الدعم", r13e:"يستمر بالعمل — رخصة دائمة وبيانات محلية وتصدير CSV في أي وقت",
+  r14:"الأنسب له بصدق", r14a:"عينات قليلة أسبوعياً", r14b:"قوائم، لا سجلات إثبات", r14c:"مختبرات تريد بوابة مرضى وفوترة مع إنترنت موثوق", r14d:"شبكات المستشفيات والأتمتة عالية الإنتاجية", r14e:"المختبرات الصغيرة التي تُبقي بياناتها داخلياً وتعمل بالعربية والإنجليزية وتمتلك أدواتها",
+  wlT:"متى لا تشتري لابفلو",
+  wl1:"— إذا كان مختبرك يعتمد على ربط مباشر بأجهزة التحليل (ASTM/HL7). نستورد ملفات CSV اليوم؛ الربط المباشر على خارطة الطريق لكنه ليس في الصندوق. نظام مؤسسي أو نظام طبي متخصص سيخدمك أفضل الآن.",
+  wl2:"— إذا كنت تفوتر شركات التأمين يومياً. فوترة لابفلو أساسية ولا تتصل بأنظمة التأمين.",
+  wl3:"— إذا أردت بوابة نتائج للمرضى عبر الإنترنت. لابفلو يُبقي كل شيء دون اتصال بالتصميم — هذه هي الفكرة، لكنها تعني عدم وجود بوابة إلكترونية للمرضى.",
+  wl4:"إن لم ينطبق عليك شيء مما سبق — وسجلّك ورقي أو إكسل — فهذا بالضبط المختبر الذي بُني لابفلو له.",
+  ctaTitle:"تحقق بنفسك من كل ادعاء في هذه الصفحة",
+  ctaSub:"النسخة التجريبية ١٤ يوماً هي المنتج الكامل دون أي قفل. أو احجز عرضاً لمدة ٢٠ دقيقة وأحضر أصعب أسئلتك.",
+  ctaBtn:"احجز عرضاً",
+  footNote:"© 2026 لابفلو — نظام معلومات مختبرات يعمل دون إنترنت. جميع الحقوق محفوظة.",
+  ftHome:"الرئيسية", ftPricing:"الأسعار", ftDemo:"احجز عرضاً", ftPrivacy:"الخصوصية", ftTerms:"الشروط"
+}};
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

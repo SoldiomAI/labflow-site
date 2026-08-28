@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a demo — LabFlow LIMS</title>
+<meta name="description" content="Book a 20-minute LabFlow LIMS demo mapped to your lab's real workflow — sample intake to signed report. English or Arabic. Free 14-day trial afterwards.">
+<link rel="canonical" href="https://soldiomai.github.io/labflow-site/demo.html">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="theme-color" content="#faf9f6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book a LabFlow LIMS demo">
+<meta property="og:description" content="20 minutes, your workflow, English or Arabic. See sample intake to signed report — fully offline.">
+<meta property="og:image" content="https://soldiomai.github.io/labflow-site/assets/dashboard-light.png">
+<meta property="og:url" content="https://soldiomai.github.io/labflow-site/demo.html">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="LabFlow logo" width="30" height="30"><span>LabFlow&nbsp;LIMS</span></a>
+    <div class="nav-links">
+      <a href="index.html#features" data-i18n="navFeatures">Features</a>
+      <a href="industries.html" data-i18n="navIndustries">Industries</a>
+      <a href="compare.html" data-i18n="navCompare">Compare</a>
+      <a href="pricing.html" data-i18n="navPricing">Pricing</a>
+      <a href="faq.html" data-i18n="navFaq">FAQ</a>
+      <a href="security.html" data-i18n="navSecurity">Security</a>
+    </div>
+    <div class="nav-cta">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+      <a class="btn small" href="demo.html" style="pointer-events:none" data-i18n="navCta">Book a demo</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="sec-label"><span data-i18n="headLabel">Demo · 20 minutes · English or Arabic</span></div>
+    <h1 data-i18n-html="headTitle">See <em>your lab</em> running on LabFlow</h1>
+    <p class="lead" data-i18n="headSub">You tell us how you record samples today — paper register, Excel, anything. We show LabFlow doing the same job on screen: intake, result entry, verification, signed PDF report. No slides, no obligation.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap demo-grid">
+    <div>
+      <form id="demoForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="W3F_ACCESS_KEY">
+        <input type="hidden" name="subject" value="LabFlow demo request">
+        <input type="hidden" name="from_name" value="LabFlow website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <div class="field"><label for="fName" data-i18n="fName">Your name</label><input id="fName" name="name" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="fOrg" data-i18n="fOrg">Organisation / lab</label><input id="fOrg" name="organization" type="text" required autocomplete="organization"></div>
+          <div class="field"><label for="fType" data-i18n="fType">Lab type</label>
+            <select id="fType" name="lab_type" required>
+              <option value="" data-i18n="fType0">Choose…</option>
+              <option value="medical" data-i18n="fType1">Private medical laboratory</option>
+              <option value="clinic" data-i18n="fType2">Clinic / medical centre lab</option>
+              <option value="food-water-env" data-i18n="fType3">Food, water or environmental lab</option>
+              <option value="factory-qc" data-i18n="fType4">Factory / industrial QC</option>
+              <option value="pharmacy-qc" data-i18n="fType5">Pharmacy / pharma QC</option>
+              <option value="gov-other" data-i18n="fType6">Government / other</option>
+            </select>
+          </div>
+          <div class="field"><label for="fPhone" data-i18n="fPhone">Phone / WhatsApp</label><input id="fPhone" name="phone_whatsapp" type="tel" required autocomplete="tel"></div>
+          <div class="field"><label for="fLang" data-i18n="fLang">Demo language</label>
+            <select id="fLang" name="demo_language">
+              <option value="arabic" data-i18n="fLangAr">Arabic</option>
+              <option value="english" data-i18n="fLangEn">English</option>
+            </select>
+          </div>
+          <div class="field"><label for="fEmail" data-i18n="fEmail">Email (optional)</label><input id="fEmail" name="email" type="email" autocomplete="email"></div>
+          <div class="field full"><label for="fFocus" data-i18n="fFocus">What should the demo focus on? (optional)</label><textarea id="fFocus" name="focus"></textarea></div>
+        </div>
+        <div style="margin-top:22px"><button class="btn" id="formBtn" type="submit" data-i18n="fSubmit">Book my demo</button></div>
+        <p class="form-note" data-i18n="fNote">We reply within one working day. Your details reach the LabFlow team only — never shared, never added to a mailing list.</p>
+        <div class="form-err" id="formErr" hidden>
+          <span data-i18n="fErr">The form could not send just now. Use either button below — same result, slightly less convenient:</span><br>
+          <a class="btn small alt" href="https://github.com/SoldiomAI/labflow-site/issues/new?template=trial-request.yml" target="_blank" rel="noopener" data-i18n="fErrTrial">Request a trial on GitHub</a>
+          <a class="btn small alt" href="https://github.com/SoldiomAI/labflow-site/issues/new?template=pilot-request.yml" target="_blank" rel="noopener" data-i18n="fErrPilot">Apply for a pilot seat</a>
+        </div>
+      </form>
+      <div class="form-ok" id="formOk" hidden>
+        <b data-i18n="fOkT">Request received.</b> <span data-i18n="fOkP">We will contact you within one working day to set a time. If it's urgent, mention that in the message — we read everything.</span>
+      </div>
+    </div>
+
+    <aside>
+      <div class="contact-box">
+        <div class="k" data-i18n="nxK">What happens next</div>
+        <div class="row" data-i18n="nx1">1 — We reply to agree a time that suits you</div>
+        <div class="row" data-i18n="nx2">2 — 20-minute demo mapped to your actual workflow</div>
+        <div class="row" data-i18n="nx3">3 — You receive the installer and a 14-day full trial</div>
+      </div>
+      <div class="contact-box" style="margin-top:20px">
+        <div class="k" data-i18n="piK">Founding pilot · 3 seats</div>
+        <div class="row" data-i18n="pi1">Run LabFlow free for 90 days with setup help</div>
+        <div class="row" data-i18n="pi2">Your data stays yours; honest feedback expected</div>
+        <div class="row" style="border-bottom:0"><a class="textlink" href="https://github.com/SoldiomAI/labflow-site/issues/new?template=pilot-request.yml" target="_blank" rel="noopener" data-i18n="pi3">Apply for a pilot seat →</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-base" style="border-top:0;padding-top:0">
+      <span data-i18n="footNote">© 2026 LabFlow LIMS — offline laboratory software. All rights reserved.</span>
+      <span><a class="textlink" href="index.html" data-i18n="ftHome">Home</a> · <a class="textlink" href="pricing.html" data-i18n="ftPricing">Pricing</a> · <a class="textlink" href="security.html" data-i18n="ftSecurity">Security</a> · <a class="textlink" href="privacy.html" data-i18n="ftPrivacy">Privacy</a> · <a class="textlink" href="terms.html" data-i18n="ftTerms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.I18N = { ar: {
+  navFeatures:"المزايا", navIndustries:"القطاعات", navCompare:"المقارنة", navPricing:"الأسعار", navFaq:"الأسئلة", navSecurity:"الأمان", navCta:"احجز عرضاً",
+  headLabel:"عرض توضيحي · ٢٠ دقيقة · بالعربية أو الإنجليزية",
+  headTitle:"شاهد <em>مختبرك</em> يعمل على لابفلو",
+  headSub:"أخبرنا كيف تسجّلون العينات اليوم — دفتر ورقي، إكسل، أي طريقة. ونعرض لك لابفلو ينجز نفس العمل على الشاشة: استلام العينة، إدخال النتيجة، الاعتماد، ثم تقرير PDF موقّع. بلا شرائح عرض وبلا أي التزام.",
+  fName:"الاسم", fOrg:"الجهة / المختبر", fType:"نوع المختبر",
+  fType0:"اختر…", fType1:"مختبر طبي خاص", fType2:"مختبر عيادة / مجمع طبي", fType3:"مختبر أغذية أو مياه أو بيئة", fType4:"مراقبة جودة مصنع", fType5:"جودة صيدلانية / أدوية", fType6:"جهة حكومية / أخرى",
+  fPhone:"الهاتف / واتساب", fLang:"لغة العرض", fLangAr:"العربية", fLangEn:"الإنجليزية", fEmail:"البريد الإلكتروني (اختياري)",
+  fFocus:"على ماذا نركّز في العرض؟ (اختياري)", fSubmit:"احجز العرض",
+  fNote:"نرد خلال يوم عمل واحد. بياناتك تصل فريق لابفلو فقط — لا تُشارك مع أحد ولا تُضاف لأي قائمة بريدية.",
+  fErr:"تعذّر الإرسال الآن. استخدم أحد الخيارين أدناه — نفس النتيجة:",
+  fErrTrial:"اطلب نسخة تجريبية عبر GitHub", fErrPilot:"قدّم على مقعد تجريبي",
+  fOkT:"استلمنا طلبك.", fOkP:"سنتواصل معك خلال يوم عمل لتحديد الموعد. إن كان الأمر عاجلاً فاذكر ذلك في الرسالة — نقرأ كل شيء.",
+  nxK:"ماذا يحدث بعد ذلك", nx1:"١ — نرد عليك لتحديد موعد يناسبك", nx2:"٢ — عرض ٢٠ دقيقة على سير عملكم الفعلي", nx3:"٣ — تستلم المثبّت ونسخة تجريبية كاملة ١٤ يوماً",
+  piK:"البرنامج التجريبي التأسيسي · ٣ مقاعد", pi1:"شغّل لابفلو مجاناً ٩٠ يوماً مع مساعدة في الإعداد", pi2:"بياناتك تبقى ملكك؛ نتوقع ملاحظات صادقة", pi3:"قدّم على مقعد تجريبي ←",
+  footNote:"© 2026 لابفلو — نظام معلومات مختبرات يعمل دون إنترنت. جميع الحقوق محفوظة.",
+  ftHome:"الرئيسية", ftPricing:"الأسعار", ftSecurity:"الأمان", ftPrivacy:"الخصوصية", ftTerms:"الشروط"
+}};
+</script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  'use strict';
+  var f = document.getElementById('demoForm');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err = document.getElementById('formErr');
+    var ok = document.getElementById('formOk');
+    var btn = document.getElementById('formBtn');
+    var key = f.querySelector('[name="access_key"]').value;
+    if (!f.reportValidity()) return;
+    if (key.indexOf('W3F_') === 0) { err.hidden = false; return; }
+    btn.disabled = true;
+    err.hidden = true;
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(f),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j.success) { f.hidden = true; ok.hidden = false; }
+      else { err.hidden = false; btn.disabled = false; }
+    }).catch(function () { err.hidden = false; btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
